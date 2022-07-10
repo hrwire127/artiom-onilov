@@ -1,0 +1,13 @@
+.profile {
+  width: 500px;
+  height: 500px;
+
+  border-radius: 16px;
+  background-color: #1363df;
+}
+
+.headline {
+  font-size: 4rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}

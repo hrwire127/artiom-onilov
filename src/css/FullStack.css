@@ -1,0 +1,19 @@
+.fullstack-profile {
+  width: 450px;
+  height: 350px;
+
+  border-radius: 16px;
+  background-color: #47B5FF;
+}
+
+.sub-headline {
+  font-size: 1.6rem;
+  font-weight: 200;
+}
+
+.full-stack-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}

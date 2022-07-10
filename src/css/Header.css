@@ -1,0 +1,38 @@
+header {
+  height: 60px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  border-bottom: 1px solid #d1d1d1;
+}
+
+.brand {
+  text-decoration: none;
+  font-size: 2rem;
+  color: #06283d;
+  font-weight: 600;
+}
+
+.navigation {
+  display: flex;
+  gap: 20px;
+}
+
+.navigation a {
+  text-decoration: none;
+  color: #47b5ff;
+  font-weight: 700;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.navigation a:hover {
+  opacity: 0.5;
+}
+
+.text-center {
+    text-align: center;
+}

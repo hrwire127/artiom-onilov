@@ -1,0 +1,40 @@
+.anywebsite-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.anywebsite-block {
+  width: 200px;
+  height: 200px;
+
+  border-radius: 16px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.anywebsite-content {
+  width: 200px;
+  height: 170px;
+
+  border-radius: 16px 16px 0 0;
+  background-color: #1363df;
+}
+
+.name {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.and-more {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-top: 60px;
+  margin-bottom: 60px;
+  text-align: center;
+  color: #1363df;
+}

@@ -1,0 +1,39 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  gap: 40px;
+}
+
+.headline-center {
+  font-size: 4rem;
+  font-weight: 700;
+  margin-bottom: 60px;
+  text-align: center;
+}
+
+.paragraph {
+  flex: 1;
+}
+
+.text {
+  font-size: 4rem;
+  font-weight: 300;
+  margin-top: 0px;
+}
+
+.blue {
+  color: #1363df;
+  font-weight: 700;
+}
+
+.black {
+  font-weight: 700;
+}
+
+.text-center {
+  text-align: center;
+}
+
+
