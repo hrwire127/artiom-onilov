@@ -4,7 +4,7 @@ function AnyWebsite()
 {
     return (
         <section className="margin-total">
-            <div className="headline-center">Any type of website You <span className="blue">Want</span></div>
+            <div className="headline-center">Any type of website You <span className="blue">Want</span> 💖</div>
             <section className="anywebsite-container">
                 <div className="anywebsite-block shadow">
                     <div className="anywebsite-content" />

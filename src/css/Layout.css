@@ -9,7 +9,7 @@
 }
 
 .shadow {
-  box-shadow: 0 0 10px -5px;
+  box-shadow: 0 0 10px -5px #06283D;
 }
 
 .action-btn {
@@ -17,10 +17,17 @@
 
   width: 200px;
   height: 50px;
-  background-color: #47b5ff;
+  background-color: #47B5FF;
   color: white;
-  border-radius: 4px;
+  border-radius: 8px;
 
   font-size: 1.5rem;
   font-weight: 600;
+
+  transition: background-color 0.3s ease-in-out;
+}
+
+.action-btn:hover {
+  background-color: #98d6ff;
+  cursor: pointer;
 }

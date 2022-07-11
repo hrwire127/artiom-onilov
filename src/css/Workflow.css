@@ -1,0 +1,10 @@
+.workflow-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.workflow-block {
+    width: 400px;
+    height: 400px;
+    text-align: center;
+}

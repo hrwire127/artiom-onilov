@@ -4,7 +4,7 @@ function WebsiteIdeea()
 {
     return (
         <section className="margin-total">
-            <div className="headline-center">I can bring your ideea to life</div>
+            <div className="headline-center">I Can bring your website to life 🍃</div>
             <div className="container">
                 <div className="websiteideea-profile shadow" />
                 <div className="paragraph">

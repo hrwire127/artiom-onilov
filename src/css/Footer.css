@@ -1,0 +1,21 @@
+footer {
+  height: 60px;
+  border-top: 1px solid #d1d1d1;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-contacts {
+  display: flex;
+  justify-content: center;
+  gap: 11px;
+}
+
+.footer-contact-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+  background-color: #818181;
+}
