@@ -1,0 +1,52 @@
+@keyframes appear {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes disappear {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0);
+  }
+}
+
+.scroll-top {
+  position: fixed;
+  bottom: 3%;
+  right: 3%;
+
+  width: 70px;
+  height: 70px;
+
+  border-radius: 100px;
+  background-color: #47b5ff;
+  transition: background-color 0.3s ease-in-out;
+
+  animation-name: appear;
+  animation-duration: 0.5s;
+}
+
+.scroll-top:hover {
+  background-color: #74d3f8;
+  cursor: pointer;
+}
+
+.icon-top {
+  transform: rotate(270deg);
+  color: white;
+  font-size: 2.5rem;
+  margin-top: -10px;
+  margin-left: -4px;
+}
+
+.scroll-disappear {
+  animation-name: disappear;
+  animation-duration: 0.5s;
+  transform: scale(0);
+}

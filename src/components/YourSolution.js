@@ -4,7 +4,7 @@ function YourSolution()
 {
     return (
         <section className="margin-total">
-            <div className="headline-center"><span className="blue">Unique</span> and Performant 🌟</div>
+            <div className="headline-center"><span className="blue">Unique</span> and Personalized 🌟</div>
             <div className="container">
                 <div className="profile shadow" />
                 <div className="paragraph">

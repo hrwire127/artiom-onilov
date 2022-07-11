@@ -19,7 +19,7 @@ function PortofolioBanner()
                     <p className="name">Opal</p>
                 </div>
                 <div className="portofolio-block shadow">
-                    <p className="name">And More...</p>
+                    <p className="name">See More</p>
                 </div>
             </div>
         </section>
