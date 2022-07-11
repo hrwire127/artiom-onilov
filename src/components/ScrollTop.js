@@ -4,31 +4,46 @@ import { animateScroll as scroll } from 'react-scroll'
 function ScrollTop()
 {
     const [toggled, setToggled] = useState(false)
+    const [blocked, setBlocked] = useState(false)
     const [y, setY] = useState(window.scrollY);
 
     const maxTopDistance = -1000
+    const scrollDuration = 1000
 
-    const handleNavigation = useCallback(
-        e =>
+    const handleNavigation = useCallback(e =>
+    {
+        const window = e.currentTarget;
+        if (y > window.scrollY)
         {
-            const window = e.currentTarget;
-            if (y > window.scrollY)
-            {
-                const header = document.querySelector('header');
-                const distanceToTop = header.getBoundingClientRect().top;
+            const header = document.querySelector('header');
+            const distanceToTop = header.getBoundingClientRect().top;
 
-                if (distanceToTop < maxTopDistance)
-                {
-                    setToggled(true)
-                }
-                else
-                {
-                    setToggled(false)
-                }
+            if (distanceToTop < maxTopDistance && !blocked)
+            {
+                setToggled(true)
             }
-            setY(window.scrollY);
-        }, [y]
+            else
+            {
+                setToggled(false)
+            }
+        }
+        else if (!blocked)
+        {
+            setToggled(false)
+        }
+        setY(window.scrollY);
+    }, [y]
     );
+
+    const scrollToTop = () =>
+    {
+        scroll.scrollToTop({ duration: scrollDuration })
+        setBlocked(true)
+        setTimeout(() =>
+        {
+            setBlocked(false)
+        }, scrollDuration)
+    }
 
     useEffect(() =>
     {
@@ -42,9 +57,9 @@ function ScrollTop()
     }, [handleNavigation]);
 
     return (
-        <div onClick={() => scroll.scrollToTop()} className={`scroll-top shadow-top ${!toggled && "scroll-disappear" }`} >
+        <div onClick={scrollToTop} className={`scroll-top shadow-top ${!toggled && "scroll-disappear"}`} >
             <div className="icon-top">&#10148;</div>
-        </div >
+        </div>
     )
 }
 

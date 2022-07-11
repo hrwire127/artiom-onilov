@@ -17,3 +17,13 @@
   justify-content: center;
   align-items: center;
 }
+
+.back-to-top {
+  margin: auto;
+
+  width: 70px;
+  height: 70px;
+
+  border-radius: 100px;
+  background-color: #47b5ff;
+}

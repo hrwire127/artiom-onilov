@@ -29,7 +29,7 @@
   transition: background-color 0.3s ease-in-out;
 
   animation-name: appear;
-  animation-duration: 0.5s;
+  animation-duration: 0.2s;
 }
 
 .scroll-top:hover {
@@ -47,6 +47,6 @@
 
 .scroll-disappear {
   animation-name: disappear;
-  animation-duration: 0.5s;
+  animation-duration: 0.2s;
   transform: scale(0);
 }
