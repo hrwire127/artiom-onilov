@@ -1,5 +1,6 @@
 import React from 'react'
-import { Link, Element } from 'react-scroll'
+import { Link } from "react-router-dom";
+import { Element } from 'react-scroll'
 
 function CallToAction()
 {
@@ -13,31 +14,27 @@ function CallToAction()
                 </div>
             </div>
         </section>
-        <section className="margin-total">
+        <section className="margin-top">
             <Element name="test1" className="element">
-                <div className="headline-center"><span className="blue">Contact Me</span></div>
+                <div className="headline-center"><span className="blue">Get Your Website</span></div>
                 <div className="sub-headline text-center">Place an order 🎁</div>
                 <div className="contact-container">
                     <div className="contact-block">
-                        <div className="contact-img shadow" />
-                        <p className="sub-heading">Facebook</p>
+                        <img alt="facebook-contact" src="/images/facebook.png" className="contact-img contact-radius shadow" />
                     </div>
                     <div className="contact-block">
-                        <div className="contact-img shadow" />
-                        <p className="sub-heading">Instagram</p>
+                        <img alt="email-contact" src="/images/email.png" className="contact-img shadow" />
                     </div>
                     <div className="contact-block">
-                        <div className="contact-img shadow" />
-                        <p className="sub-heading">LinkedIn</p>
-                    </div>
-                    <div className="contact-block">
-                        <div className="contact-img shadow" />
-                        <p className="sub-heading">Email</p>
+                        <img alt="instagram-contact" src="/images/instagram.png" className="contact-img contact-radius shadow" />
                     </div>
                 </div>
             </Element>
 
         </section>
+        <div className="navigation" style={{ justifyContent: "center", marginTop: "130px", marginBottom: "130px" }}>
+            <Link to="portofolio">BROWSE PORTOFOLIO</Link>
+        </div>
     </>
     )
 }

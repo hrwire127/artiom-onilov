@@ -8,6 +8,7 @@ function ScrollTop()
     const [y, setY] = useState(window.scrollY);
 
     const maxTopDistance = -1000
+    const minTopDistance = -5000
     const scrollDuration = 1000
 
     const handleNavigation = useCallback(e =>

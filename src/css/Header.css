@@ -22,11 +22,12 @@ header {
   gap: 20px;
 }
 
-.navigation a {
+a {
   text-decoration: none;
-  color: #47b5ff;
+  color:#45b2fbc9;
   font-weight: 700;
   transition: opacity 0.2s ease-in-out;
+  cursor: pointer;
 }
 
 .navigation a:hover {

@@ -9,13 +9,21 @@ footer {
 
 .footer-contacts {
   display: flex;
-  justify-content: center;
-  gap: 11px;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
 }
 
 .footer-contact-img {
-  width: 40px;
-  height: 40px;
-  border-radius: 4px;
-  background-color: #818181;
+  width: 25px;
+  filter: grayscale(100%);
+}
+
+.footer-contact-img:hover {
+  cursor: pointer;
+  filter: grayscale(50%);
+}
+
+.text-disabled {
+  color: gray!important;
 }

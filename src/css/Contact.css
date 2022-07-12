@@ -1,14 +1,21 @@
 .contact-container {
   margin-top: 60px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
+  margin-bottom: 60px;
 }
 
 .contact-img {
   width: 100px;
-  height: 100px;
-  background-color: #47b5ff;
-  border-radius: 16px;
+}
+
+.contact-radius {
+  border-radius: 25px;
+}
+
+.contact-img:hover {
+  cursor: pointer;
+  filter: sepia(100%) hue-rotate(190deg) saturate(500%);
 }
 
 .contact-block {
@@ -25,5 +32,5 @@
   height: 70px;
 
   border-radius: 100px;
-  background-color: #47b5ff;
+  background-color: #45b2fbc9;
 }
