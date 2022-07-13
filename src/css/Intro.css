@@ -13,7 +13,26 @@
   color: #06283d;
 }
 
-.btn-container {
+.btn-container-left {
   display: flex;
   justify-content: left;
+}
+
+.btn-container-center {
+  display: flex;
+  justify-content: center;
+}
+
+.no-bottom {
+  margin-bottom: 0px;
+}
+
+.text-collapsed {
+  width: 100%;
+  display: flex;
+  justify-content: left;
+}
+
+.text-margin-bottom {
+  margin-bottom: 64px;
 }

@@ -14,6 +14,7 @@ import "../css/Intro.css"
 import "../css/Workflow.css"
 import "../css/PortofolioBanner.css"
 import "../css/Contact.css"
+import "../css/Form.css"
 import YourSolution from '../components/YourSolution'
 import { Link, Button, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
 

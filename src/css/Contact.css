@@ -1,8 +1,9 @@
 .contact-container {
-  margin-top: 60px;
+  margin-top: 70px;
   display: flex;
   justify-content: space-evenly;
   margin-bottom: 60px;
+  transform: scale(0.6);
 }
 
 .contact-img {

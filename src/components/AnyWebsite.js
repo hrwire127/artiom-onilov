@@ -23,7 +23,7 @@ function AnyWebsite()
                     <p className="name">Social</p>
                 </div>
             </section>
-            <div className="and-more">And More ...</div>
+            <div className="and-more opacity-anim">And More ...</div>
         </section>
     )
 }
