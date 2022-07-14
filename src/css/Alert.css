@@ -1,0 +1,27 @@
+.alert-container {
+  position: fixed;
+  text-align: center;
+
+  height: 50px;
+  line-height: 40px;
+  top: 5%;
+  left: 50%;
+  transform: translate(-50%, 5%);
+
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 5px;
+  border-radius: 4px;
+  color: white;
+
+  animation: side 0.5s;
+}
+
+@keyframes side {
+  0% {
+    transform: translate(-50%, -1000px);
+  }
+  100% {
+    transform: translate(-50%, 5%);
+  }
+}

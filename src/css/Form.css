@@ -8,6 +8,18 @@ textarea {
   font-family: "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
     "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   font-size: 1.4rem;
+
+  transition: border-color 0.1s ease-in-out;
+}
+
+input:hover,
+textarea:hover {
+  border: 2px solid #9fe4ff;
+}
+
+input:focus,
+textarea:focus {
+  border: 2px solid #06283D;
 }
 
 textarea {

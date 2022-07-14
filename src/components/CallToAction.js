@@ -24,7 +24,7 @@ function CallToAction()
 
             </Element>
         </section>
-        <div className="navigation" style={{ justifyContent: "center", marginTop: "130px", marginBottom: "130px" }}>
+        <div className="navigation" style={{ justifyContent: "center", marginTop: "100px", marginBottom: "100px" }}>
             <Link to="portofolio">BROWSE PORTOFOLIO</Link>
         </div>
         {/* <div className="contact-container">
