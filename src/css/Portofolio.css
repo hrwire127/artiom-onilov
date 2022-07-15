@@ -1,0 +1,157 @@
+.containers {
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.portofolio-container-diff {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.huge-row {
+  width: 50vw; /* */
+  height: 500px;
+}
+
+.small-row {
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.portofolio-container-normal {
+  display: flex;
+  justify-content: left;
+  gap: 20px;
+  height: 250px;
+}
+
+.portofolio-item {
+  background-color: rgb(131, 131, 131);
+  border-radius: 4px;
+  transition: background-color 0.5s ease-in-out;
+}
+
+.portofolio-item:hover {
+  background-color: rgb(83, 83, 83);
+  cursor: pointer;
+}
+
+.item {
+  flex: 1;
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+.item-sm {
+  position: relative;
+  flex: 1;
+  height: unset;
+  position: relative;
+}
+
+.item-normal {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+.item-img {
+  width: 100%;
+  height: 80%;
+  background-color: #1363df;
+  border-radius: 4px 4px 0 0;
+}
+
+.item-control {
+  padding-left: 16px;
+  padding-right: 16px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  height: 20%;
+  border-radius: 0 0 4px 4px;
+}
+
+.item-title-dark {
+  padding-left: 16px;
+  padding-top: 6px;
+  font-size: 2rem;
+  font-weight: 500;
+  color: #06283d;
+}
+
+.item-title-light {
+  padding-left: 16px;
+  padding-top: 6px;
+  font-size: 2rem;
+  font-weight: 500;
+  color: #dce3e7;
+}
+
+.item-repo {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+.item-repo a {
+  padding-bottom: 20px;
+  cursor: alias;
+}
+
+.item-repo:hover {
+  opacity: 1;
+}
+
+.item-repo-dark {
+  padding-left: 16px;
+  padding-top: 6px;
+  font-size: 2rem;
+  font-weight: 300;
+  color: #06283d;
+}
+
+.item-link:hover {
+  text-decoration: underline;
+}
+
+@keyframes cover {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.cover {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  background-color: rgba(0, 0, 0, 0.486);
+  z-index: 5;
+  animation: cover 0.5s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

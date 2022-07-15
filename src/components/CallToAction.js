@@ -15,7 +15,7 @@ function CallToAction()
                 </div>
             </div>
         </section>
-        <section className="margin-top">
+        <section className="margin-total">
             <Element name="test1" className="element">
                 <div className="headline-center" style={{ marginBottom: "30px" }}><span className="blue opacity-anim">Get Your Website</span></div>
                 <div className="sub-headline text-center">Place an order 🎁</div>
@@ -24,9 +24,9 @@ function CallToAction()
 
             </Element>
         </section>
-        <div className="navigation" style={{ justifyContent: "center", marginTop: "100px", marginBottom: "100px" }}>
+        {/* <div className="navigation" style={{ justifyContent: "center", marginTop: "100px", marginBottom: "100px" }}>
             <Link to="portofolio">BROWSE PORTOFOLIO</Link>
-        </div>
+        </div> */}
         {/* <div className="contact-container">
             <div className="contact-block">
                 <img alt="facebook-contact" src="/images/facebook.png" className="contact-img contact-radius shadow" />

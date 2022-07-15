@@ -140,7 +140,7 @@ function Form()
             <Alert message={alert ? alert.message : null} type={alert ? alert.type : null} />
             <div className="input-container">
                 <input
-                    placeholder='Name'
+                    placeholder='Your Name'
                     id="name"
                     name="from_name"
                     className=""
@@ -149,7 +149,7 @@ function Form()
                     onChange={handleChange}
                 />
                 <input
-                    placeholder='Email'
+                    placeholder='Your Email'
                     id="email"
                     name='from_email'
                     className=""
