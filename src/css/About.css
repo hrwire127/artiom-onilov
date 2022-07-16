@@ -1,0 +1,24 @@
+.skill-img {
+  height: 30px;
+}
+
+.skill-row {
+  width: 100%;
+  margin-top: 20px;
+  display: flex;
+  justify-content: left;
+  gap: 20px;
+}
+
+.skill-container {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  gap: 10px;
+}
+
+.skill-text {
+  font-size: 2rem;
+  color: #06283d;
+  line-height: 38px;
+}

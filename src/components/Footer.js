@@ -10,7 +10,6 @@ function Footer()
             <div className="navigation">
                 <Link to="/" className="text-disabled">HOME</Link>
                 <Link to="portofolio" className="text-disabled">PORTOFOLIO</Link>
-                <Link to="skills" className="text-disabled">SKILLS</Link>
                 <Link to="about" className="text-disabled">ABOUT</Link>
             </div>
 

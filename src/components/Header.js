@@ -9,7 +9,6 @@ function Header()
             <Link className='brand' to="/"><div>AO</div></Link>
             <div className="navigation">
                 <Link to="portofolio">PORTOFOLIO</Link>
-                <Link to="skills">SKILLS</Link>
                 <Link to="about">ABOUT</Link>
             </div>
         </header>
