@@ -11,7 +11,8 @@ function CallToAction()
                 <div className="profile shadow" />
                 <div className="paragraph">
                     <div className="headline">I got your back <span className="glow-anim ">☀️</span></div>
-                    <div className="text">Everything you <span className="blue">want</span>, in <span className="blue">one place</span>🌎</div>
+                    <div className="text">Everything you <span className="blue">want</span> </div>
+                    <div className="text">in <span className="blue">one place</span>🌎</div>
                 </div>
             </div>
         </section>

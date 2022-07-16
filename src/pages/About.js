@@ -24,8 +24,8 @@ function About()
             <div className="profile shadow opacity-anim" />
         </section>
         <section className="margin-total-sm">
-            <div className="headline">Total skills</div>
-            <div className="sub-headline">relevant and highly mastered</div>
+            <div className="headline">Relevant Skills</div>
+            <div className="sub-headline">highly mastered and heavy used</div>
             <div className="skill-row" >
                 <div className="skill-container">
                     <img
