@@ -1,5 +1,6 @@
 import React from 'react'
 import "../css/About.css"
+import Animate from '../components/Animate'
 
 function About()
 {
@@ -21,7 +22,9 @@ function About()
                     </section>
                 </div>
             </div>
-            <div className="profile shadow opacity-anim" />
+            <Animate animation="opacity-anim">
+                <div className="profile shadow" />
+            </Animate>
         </section>
         <section className="margin-total-sm">
             <div className="headline">Relevant Skills</div>

@@ -3,7 +3,6 @@ import AnyWebsite from '../components/AnyWebsite'
 import FullStack from '../components/FullStack'
 import Intro from '../components/Intro'
 import WebsiteIdeea from '../components/WebsiteIdeea'
-import Workflow from '../components/Workflow'
 import PortofolioBanner from '../components/PortofolioBanner'
 import CallToAction from '../components/CallToAction'
 import "../css/Home.css"
@@ -16,7 +15,7 @@ import "../css/PortofolioBanner.css"
 import "../css/Contact.css"
 import "../css/Form.css"
 import YourSolution from '../components/YourSolution'
-import { Link, Button, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
+import { Events, animateScroll as scroll, scrollSpy } from 'react-scroll'
 
 function Home()
 {
@@ -37,6 +36,7 @@ function Home()
             Events.scrollEvent.remove('end');
         }
     })
+
 
     return (
         <div>

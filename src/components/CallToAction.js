@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from "react-router-dom";
 import { Element } from 'react-scroll'
 import Form from './Form';
+import Animate from './Animate'
 
 function CallToAction()
 {
@@ -10,38 +11,31 @@ function CallToAction()
             <div className="container">
                 <div className="profile shadow" />
                 <div className="paragraph">
-                    <div className="headline">I got your back <span className="glow-anim ">☀️</span></div>
+                    <div className="headline container-left">
+                        I got your back
+                        <Animate animation="glow-anim"><span>☀️</span></Animate>
+                    </div>
                     <div className="text">Everything you <span className="blue">want</span> </div>
                     <div className="text">in <span className="blue">one place</span>🌎</div>
                 </div>
             </div>
         </section>
-        <section className="margin-total">
+        <section style={{marginTop: 160, marginBottom: 160}}>
             <Element name="test1" className="element">
-                <div className="headline-center" style={{ marginBottom: "30px" }}><span className="blue opacity-anim">Get Your Website</span></div>
+                <Animate animation="opacity-anim-slow">
+                    <div
+                        className="headline-center blue"
+                        style={{ marginBottom: "30px" }}
+                    >
+                        Get Your Website
+                    </div>
+                </Animate>
                 <div className="sub-headline text-center">Place an order 🎁</div>
                 <Form />
                 <div className="sub-headline text-center text-disabled" style={{ fontSize: "1.2rem", marginTop: "20px" }}>contact@artiomonilov.com</div>
 
             </Element>
         </section>
-        {/* <div className="navigation" style={{ justifyContent: "center", marginTop: "100px", marginBottom: "100px" }}>
-            <Link to="portofolio">BROWSE PORTOFOLIO</Link>
-        </div> */}
-        {/* <div className="contact-container">
-            <div className="contact-block">
-                <img alt="facebook-contact" src="/images/facebook.png" className="contact-img contact-radius shadow" />
-            </div>
-            <div className="contact-block">
-                <img alt="email-contact" src="/images/email.png" className="contact-img shadow" />
-            </div>
-            <div className="contact-block">
-                <img alt="instagram-contact" src="/images/instagram.png" className="contact-img contact-radius shadow" />
-            </div>
-            <div className="contact-block">
-                <img alt="github-contact" src="/images/github.png" className="contact-img contact-radius shadow" />
-            </div>
-        </div> */}
     </>
     )
 }

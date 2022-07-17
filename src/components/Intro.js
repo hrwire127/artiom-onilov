@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { Link, Element } from 'react-scroll'
+import Animate from './Animate'
 
 function Intro()
 {
@@ -57,7 +58,11 @@ function Intro()
                 <div className="headline">Artiom Onilov</div>
                 <div className="text-collapsed ">
                     <p className="text no-bottom">Your favorite</p>
-                    <div className="grow-anim text">💙</div>
+                    <Animate animation="grow-anim">
+                        <div className="text">
+                            💙
+                        </div>
+                    </Animate>
                 </div>
                 {hightlight
                     ? (<p
@@ -91,7 +96,9 @@ function Intro()
                     </Link>
                 </div>
             </div>
-            <div className="profile shadow opacity-anim" />
+            <Animate animation="opacity-anim">
+                <div className="profile shadow" />
+            </Animate>
         </section >
     )
 }

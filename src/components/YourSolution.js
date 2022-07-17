@@ -1,17 +1,74 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
+import { useInView } from "react-intersection-observer";
+import Animate from './Animate'
 
 function YourSolution()
 {
+    const [stage, setStage] = useState()
+    const [ref, inView] = useInView()
+
+    useEffect(() =>
+    {
+        if (inView)
+        {
+            (async function i()
+            {
+                await timeout(800)
+                setStage(0)
+                await timeout(800)
+                setStage(1)
+                await timeout(800)
+                setStage(2)
+            })()
+        }
+    }, [inView]);
+
+    const timeout = (delay) =>
+    {
+        return new Promise(async (resolve, reject) =>
+        {
+            setTimeout(() =>
+            {
+                resolve()
+            }, delay)
+        })
+    }
+
+
     return (
-        <section className="margin-total">
-            <div className="headline-center"><span className="blue">Unique</span> and Personalized <span className="glow-anim">🌟</span></div>
+        <section
+            className="margin-total"
+        >
+            <div className="headline-center container-center">
+                <div>
+                    <span className="blue">Unique </span>
+                    and Personalized
+                </div>
+                <Animate animation="glow-anim">
+                    <span>🌟</span>
+                </Animate>
+            </div>
             <div className="container">
                 <div className="profile shadow" />
                 <div className="paragraph">
                     <div className="headline">No copying 📝</div>
-                    <div className="text">Your <span className="blue opacity-anim">ideea</span></div>
-                    <div className="text">Your <span className="blue opacity-anim">solution</span></div>
-                    <div className="text">Your <span className="black">own</span> <span className="blue opacity-anim">website</span></div>
+                    {stage >= 0 ? (
+                        <div className="text opacity-anim">Your <span className="blue">ideea</span></div>
+                    ) : <div className="text" style={{ opacity: 0 }}>{"."}</div>}
+
+                    {stage >= 1 ? (
+                        <div className="text opacity-anim" >Your <span className="blue">solution</span></div>
+                    ) : <div className="text" style={{ opacity: 0 }}>{"."}</div>}
+
+                    {stage >= 2 ? (
+                        <div className="text opacity-anim" >Your <span className="black">own</span> <span className="blue">website</span></div>
+                    ) : <div
+                        ref={ref}
+                        className="text"
+                        style={{ opacity: 0 }}
+                    >
+                        {"."}
+                    </div>}
 
                 </div>
             </div>
