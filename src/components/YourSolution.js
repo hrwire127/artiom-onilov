@@ -1,19 +1,22 @@
 import React, { useState, useEffect } from 'react'
 import { useInView } from "react-intersection-observer";
 import Animate from './Animate'
+import useWindowSize from "../hooks/useWindowSize"
 
 function YourSolution()
 {
     const [stage, setStage] = useState()
     const [ref, inView] = useInView()
+    const [isPhoneSize] = useWindowSize(663, 0)
 
     useEffect(() =>
     {
-        if (inView)
+        if (inView && !stage)
         {
-            (async function i()
+            (async () =>
             {
-                await timeout(800)
+                setStage(-1)
+                await timeout(400)
                 setStage(0)
                 await timeout(800)
                 setStage(1)
@@ -40,18 +43,20 @@ function YourSolution()
             className="margin-total"
         >
             <div className="headline-center container-center">
-                <div>
-                    <span className="blue">Unique </span>
-                    and Personalized
+                <div className="container-center" style={{ gap: 10, flexWrap: "wrap" }}>
+                    <div><span className="blue">Unique </span> and</div>
+                    <div className="container-left">
+                        Personalized
+                        <Animate animation="glow-anim">
+                            <span>🌟</span>
+                        </Animate>
+                    </div>
                 </div>
-                <Animate animation="glow-anim">
-                    <span>🌟</span>
-                </Animate>
             </div>
-            <div className="container">
+            <div className={isPhoneSize ? "content-block" : "container"}>
                 <div className="profile shadow" />
                 <div className="paragraph">
-                    <div className="headline">No copying 📝</div>
+                    <div className={isPhoneSize ? "headline-center" : "headline"}>No copying 📝</div>
                     {stage >= 0 ? (
                         <div className="text opacity-anim">Your <span className="blue">ideea</span></div>
                     ) : <div className="text" style={{ opacity: 0 }}>{"."}</div>}

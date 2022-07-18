@@ -1,29 +1,36 @@
 import React from 'react'
-import { Link, Element } from 'react-scroll'
+import { Link } from "react-router-dom"
+import useWindowSize from "../hooks/useWindowSize"
 
 function PortofolioBanner()
 {
+    const [isPhoneSize] = useWindowSize(663, 0)
+
     return (
-        <section className="margin-total">
+        <section className="margin-total" style={isPhoneSize ? { textAlign: "center" } : {}}>
             <div className="headline-center">Not Convinced? 📚</div>
-            <div className="portofolio-container">
-                <div className="portofolio-block shadow">
-                    <div className="portofolio-img" />
-                    <p className="name">Ctice</p>
-                </div>
-                <div className="portofolio-block shadow">
-                    <div className="portofolio-img" />
-                    <p className="name">Color Palette</p>
-                </div>
-                <div className="portofolio-block shadow">
-                    <div className="portofolio-img" />
-                    <p className="name">Opal</p>
-                </div>
-                <div className="portofolio-block shadow">
-                    <Link to="portofolio">See More</Link>
-                </div>
-            </div>
-        </section>
+
+            {isPhoneSize
+                ? (<Link to="portofolio" >{"BROWSE PORTOFOLIO"}</Link>)
+                : (<>
+                    <div className="portofolio-container">
+                        <div className="portofolio-block shadow">
+                            {/* <p className="name">Ctice</p> */}
+                        </div>
+                        <div className="portofolio-block shadow">
+                            {/* <p className="name">Color Palette</p> */}
+                        </div>
+                        <div className="portofolio-block shadow">
+                            {/* <p className="name">Opal</p> */}
+                        </div>
+                        <div className="portofolio-palceholder">
+                            <Link to="portofolio" >{"SEE MORE >"}</Link>
+                        </div>
+                    </div >
+                </>)
+            }
+
+        </section >
     )
 }
 

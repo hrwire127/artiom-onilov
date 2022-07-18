@@ -1,14 +1,24 @@
 import React, { useState, useEffect } from 'react'
 import Animate from './Animate'
+import useWindowSize from "../hooks/useWindowSize"
 
 function AnyWebsite()
 {
+    const [isPhoneSize] = useWindowSize(663, 0)
+
     return (
         <section className="margin-total">
-            <div className="headline-center">Any type of website You <span className="blue">Want</span> 💖</div>
+            <div className="headline-center">Any type of website {isPhoneSize && (<br />) }You <span className="blue">Want</span> 💖</div>
 
             <section style={{ position: "relative", overflow: 'hidden' }}>
-                <div style={{ width: "110%", height: "120%", position: "absolute", top: -8, left: -66, zIndex: 10 }} className="total-shadow" />
+                <div style={{
+                    width: "110%",
+                    height: "120%",
+                    position: "absolute",
+                    top: -8,
+                    left: -66,
+                    zIndex: 10
+                }} className="total-shadow" />
                 <div className="container-total">
                     <section className="anywebsite-container anywebsite-slide">
                         <div className="anywebsite-block shadow">

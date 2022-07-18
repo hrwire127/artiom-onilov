@@ -3,24 +3,29 @@ import { Link } from "react-router-dom";
 import { Element } from 'react-scroll'
 import Form from './Form';
 import Animate from './Animate'
+import useWindowSize from "../hooks/useWindowSize"
 
 function CallToAction()
 {
+    const [isPhoneSize] = useWindowSize(663, 0)
+
     return (<>
         <section className="margin-total">
-            <div className="container">
-                <div className="profile shadow" />
+            <div className={isPhoneSize ? "content-block" : "container"}>
+                {!isPhoneSize && (<div className="profile shadow" style={{ marginTop: 30 }} />)}
                 <div className="paragraph">
-                    <div className="headline container-left">
+                    <div className={isPhoneSize ? "headline container-center" : "headline container-left"}>
                         I got your back
                         <Animate animation="glow-anim"><span>☀️</span></Animate>
                     </div>
-                    <div className="text">Everything you <span className="blue">want</span> </div>
-                    <div className="text">in <span className="blue">one place</span>🌎</div>
+                    <div className="text">Everything you </div>
+                    <div className="text"><span className="blue">want</span>, just in</div>
+                    <div className="text"><span className="blue">one place</span>🌎</div>
                 </div>
+                {isPhoneSize && (<div className="profile shadow" style={{ marginTop: 30 }} />)}
             </div>
         </section>
-        <section style={{marginTop: 160, marginBottom: 160}}>
+        <section style={{ marginTop: 160, marginBottom: 160 }}>
             <Element name="test1" className="element">
                 <Animate animation="opacity-anim-slow">
                     <div

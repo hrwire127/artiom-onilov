@@ -22,3 +22,54 @@
   color: #06283d;
   line-height: 38px;
 }
+
+.info-text {
+  font-size: 2rem;
+}
+
+.full-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 60px;
+}
+
+.center-container {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  width: fit-content;
+}
+
+@media (max-width: 880px) {
+  .info-text {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 663px) {
+  .info-text {
+    font-size: 1.2rem;
+  }
+  .padding-total {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .text {
+    text-align: left;
+  }
+}
+
+@media (max-width: 420px) {
+  .info-text {
+    font-size: 1rem;
+  }
+  .skill-img {
+    height: 20px;
+  }
+}
+
+@media (max-width: 360px) {
+  .info-text {
+    font-size: 0.9rem;
+  }
+}

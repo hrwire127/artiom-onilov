@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from 'react'
 import { Link, Element } from 'react-scroll'
 import Animate from './Animate'
+import useWindowSize from "../hooks/useWindowSize"
 
 function Intro()
 {
     const [hightlight, setHighlight] = useState()
     const [contactText, setContactText] = useState("Contact Me")
+    const [isPhoneSize] = useWindowSize(663, 0)
 
     const types = [
         { name: "", color: "red" },
@@ -25,7 +27,6 @@ function Intro()
             }, delay)
         })
     }
-
 
     useEffect(() =>
     {
@@ -52,8 +53,21 @@ function Intro()
     }, [])
 
 
-    return (
-        <section className="container margin-total">
+    const Highlight = () => hightlight
+        ? (<p
+            className={`blue text ${hightlight < types.length - 1 ? "opacity-anim" : ""}`}
+            style={{ color: types[hightlight].color }}>
+            {types[hightlight].name}
+        </p>)
+        : (<p
+            className="blue text"
+            style={{ opacity: 0 }}
+        >
+            {"."}
+        </p>)
+
+    return !isPhoneSize
+        ? (<section className="container margin-total" >
             <div className="paragraph">
                 <div className="headline">Artiom Onilov</div>
                 <div className="text-collapsed ">
@@ -64,19 +78,7 @@ function Intro()
                         </div>
                     </Animate>
                 </div>
-                {hightlight
-                    ? (<p
-                        className="blue text opacity-anim"
-                        style={{ color: types[hightlight].color }}>
-                        {types[hightlight].name}
-                    </p>)
-                    : (<p
-                        className="blue text"
-                        style={{ opacity: 0 }}
-                    >
-                        {"."}
-                    </p>)
-                }
+                <Highlight />
                 <div className="btn-container-left">
                     <Link
                         activeClass="active"
@@ -99,8 +101,42 @@ function Intro()
             <Animate animation="opacity-anim">
                 <div className="profile shadow" />
             </Animate>
-        </section >
-    )
+        </section >)
+        : (<section className="margin-total" >
+            <div className="headline-center">Artiom Onilov</div>
+            <Animate animation="opacity-anim">
+                <div className="profile shadow" />
+            </Animate>
+            <div className="paragraph">
+                <div className="text-collapsed ">
+                    <p className="text no-bottom">Your favorite</p>
+                    <Animate animation="grow-anim">
+                        <div className="text">
+                            💙
+                        </div>
+                    </Animate>
+                </div>
+                <Highlight />
+            </div>
+            <div className="btn-container-left">
+                <Link
+                    activeClass="active"
+                    to="test1"
+                    spy={true}
+                    smooth={true}
+                    offset={50}
+                    duration={500}
+                >
+                    <button
+                        className="action-btn shadow"
+                        onMouseEnter={() => { setContactText("Contact Me >") }}
+                        onMouseLeave={() => { setContactText("Contact Me") }}
+                    >
+                        {contactText}
+                    </button>
+                </Link>
+            </div>
+        </section>)
 }
 
 export default Intro

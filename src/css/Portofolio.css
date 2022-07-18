@@ -13,12 +13,13 @@
 }
 
 .huge-row {
+  flex: 1;
   width: 50vw; /* */
   height: 500px;
 }
 
 .small-row {
-  flex: 1;
+  width: 380px;
 
   display: flex;
   flex-direction: column;
@@ -154,4 +155,39 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+@media (max-width: 1200px) {
+  .containers {
+    align-items: center;
+    height: fit-content;
+    padding-left: 15vw;
+    padding-right: 15vw;
+  }
+  .item {
+    max-width: 700px;
+    width: 100%;
+    padding-bottom: 56.25%;
+    flex: 1 100%;
+    /* flex: 1 500px; */
+  }
+}
+
+@media (max-width: 830px) {
+  .containers {
+    padding-left: 5vw;
+    padding-right: 5vw;
+  }
+}
+
+@media (max-width: 662px) {
+  .padding-total {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .item-title-dark,
+  .item-title-light,
+  .item-repo-dark {
+    font-size: 1.5rem;
+  }
 }

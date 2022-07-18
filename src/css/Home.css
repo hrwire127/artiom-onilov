@@ -29,7 +29,7 @@
   font-weight: 700;
   margin-bottom: 30px;
   text-align: center;
-  color: #06283D;
+  color: #06283d;
 }
 
 .paragraph {
@@ -40,7 +40,7 @@
   font-size: 4rem;
   font-weight: 300;
   margin-top: 0px;
-  color: #06283D;
+  color: #06283d;
 }
 
 .blue {
@@ -56,3 +56,22 @@
   text-align: center;
 }
 
+@media (max-width: 1114px) {
+  .headline-center,
+  .text {
+    font-size: 3rem;
+  }
+  .headline {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 880px) {
+  .headline-center,
+  .text {
+    font-size: 2rem;
+  }
+  .headline {
+    font-size: 1rem;
+  }
+}
