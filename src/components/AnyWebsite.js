@@ -12,11 +12,9 @@ function AnyWebsite()
 
             <section style={{ position: "relative", overflow: 'hidden' }}>
                 <div style={{
-                    width: "110%",
-                    height: "120%",
+                    width: "100%",
+                    height: "100%",
                     position: "absolute",
-                    top: -8,
-                    left: -66,
                     zIndex: 10
                 }} className="total-shadow" />
                 <div className="container-total">

@@ -40,9 +40,18 @@
   width: fit-content;
 }
 
-@media (max-width: 880px) {
+@media (max-width: 1230px) and (min-width: 881px) {
+  .margin-total-sm {
+    margin: 0px !important;
+  }
+  .full-container {
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 1114px) {
   .info-text {
-    font-size: 1.6rem;
+    font-size: 1.5rem;
   }
 }
 
@@ -54,8 +63,8 @@
     padding-left: 20px;
     padding-right: 20px;
   }
-  .text {
-    text-align: left;
+  .text-about {
+    text-align: left!important;
   }
 }
 
@@ -70,6 +79,7 @@
 
 @media (max-width: 360px) {
   .info-text {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
   }
 }
+

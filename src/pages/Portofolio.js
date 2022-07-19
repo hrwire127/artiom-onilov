@@ -7,7 +7,9 @@ import "../css/Portofolio.css"
 function Portofolio()
 {
     const [loading, setLoading] = useState(false)
-    const [Stack] = useWindowSize(1200, 0)
+    const [Stack] = useWindowSize(1000, 0)
+
+    console.log(Stack)
 
     const visit = (url) =>
     {
@@ -29,7 +31,7 @@ function Portofolio()
                                 <div className="item-title-dark">
                                     Ctice 📚
                                 </div>
-                                <div className="item-repo">
+                                <div className={Stack ? "item-repo" : "item-repo item-repo-anim"}>
                                     <div className="item-repo-dark">repository</div>
                                     <a
                                         alt="ctice-repo"
@@ -48,7 +50,7 @@ function Portofolio()
                                 <div className="item-title-dark">
                                     Yahtzee 🎲
                                 </div>
-                                <div className="item-repo">
+                                <div className={Stack ? "item-repo" : "item-repo item-repo-anim"}>
                                     <div className="item-repo-dark">repository</div>
                                     <a
                                         alt="ctice-repo"
@@ -65,7 +67,7 @@ function Portofolio()
                                 <div className="item-title-dark">
                                     Opal 🔷
                                 </div>
-                                <div className="item-repo">
+                                <div className={Stack ? "item-repo" : "item-repo item-repo-anim"}>
                                     <div className="item-repo-dark">repository</div>
                                     <a
                                         alt="ctice-repo"
@@ -86,7 +88,7 @@ function Portofolio()
                                 <div className="item-title-dark">
                                     Todo List 🔖
                                 </div>
-                                <div className="item-repo">
+                                <div className={Stack ? "item-repo" : "item-repo item-repo-anim"}>
                                     <div className="item-repo-dark">repository</div>
                                     <a
                                         alt="ctice-repo"
@@ -103,7 +105,7 @@ function Portofolio()
                                 <div className="item-title-dark">
                                     Dad Jokes 🤣
                                 </div>
-                                <div className="item-repo">
+                                <div className={Stack ? "item-repo" : "item-repo item-repo-anim"}>
                                     <div className="item-repo-dark">repository</div>
                                     <a
                                         alt="ctice-repo"
@@ -122,7 +124,7 @@ function Portofolio()
                                 <div className="item-title-dark">
                                     Palette Generator 🎨
                                 </div>
-                                <div className="item-repo">
+                                <div className={Stack ? "item-repo" : "item-repo item-repo-anim"}>
                                     <div className="item-repo-dark">repository</div>
                                     <a
                                         alt="ctice-repo"
@@ -142,7 +144,7 @@ function Portofolio()
                             <div className="item-title-dark">
                                 Light's Out 💡
                             </div>
-                            <div className="item-repo">
+                            <div className={Stack ? "item-repo" : "item-repo item-repo-anim"}>
                                 <div className="item-repo-dark">repository</div>
                                 <a
                                     alt="ctice-repo"
@@ -159,7 +161,7 @@ function Portofolio()
                             <div className="item-title-dark">
                                 Hangman🧵
                             </div>
-                            <div className="item-repo">
+                            <div className={Stack ? "item-repo" : "item-repo item-repo-anim"}>
                                 <div className="item-repo-dark">repository</div>
                                 <a
                                     alt="ctice-repo"
@@ -176,7 +178,7 @@ function Portofolio()
                             <div className="item-title-dark">
                                 Todo 2 📑
                             </div>
-                            <div className="item-repo">
+                            <div className={Stack ? "item-repo" : "item-repo item-repo-anim"}>
                                 <div className="item-repo-dark">repository</div>
                                 <a
                                     alt="ctice-repo"
@@ -195,7 +197,7 @@ function Portofolio()
                             <div className="item-title-dark">
                                 Cards Deck 🃏
                             </div>
-                            <div className="item-repo">
+                            <div className={Stack ? "item-repo" : "item-repo item-repo-anim"}>
                                 <div className="item-repo-dark">repository</div>
                                 <a
                                     alt="ctice-repo"
