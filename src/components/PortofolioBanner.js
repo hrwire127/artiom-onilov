@@ -4,11 +4,12 @@ import useWindowSize from "../hooks/useWindowSize"
 
 function PortofolioBanner()
 {
-    const [isPhoneSize] = useWindowSize(663, 0)
+    const [isPhoneSize] = useWindowSize(664, 0)
 
     return (
         <section className="margin-total" style={isPhoneSize ? { textAlign: "center" } : {}}>
             <div className="headline-center">Not Convinced? 📚</div>
+            <div className="sub-headline text-center" style={{ marginBottom: 30 }}>CHECK OUT MY PORTOFOLIO</div>
 
             {isPhoneSize
                 ? (<Link to="portofolio" >{"BROWSE PORTOFOLIO"}</Link>)
@@ -29,7 +30,6 @@ function PortofolioBanner()
                     </div >
                 </>)
             }
-
         </section >
     )
 }

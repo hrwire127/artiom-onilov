@@ -4,7 +4,7 @@ import useWindowSize from "../hooks/useWindowSize"
 
 function FullStack()
 {
-    const [isPhoneSize] = useWindowSize(663, 0)
+    const [isPhoneSize] = useWindowSize(664, 0)
 
     return (
         <section className="margin-total">
@@ -13,7 +13,7 @@ function FullStack()
                 <div className="container-left">
                     Developer
                     <Animate animation="glow-anim"
-                    ><span>👑</span>
+                    ><span> 👑</span>
                     </Animate>
                 </div>
             </div>

@@ -7,7 +7,7 @@ import useWindowSize from "../hooks/useWindowSize"
 
 function CallToAction()
 {
-    const [isPhoneSize] = useWindowSize(663, 0)
+    const [isPhoneSize] = useWindowSize(664, 0)
 
     return (<>
         <section className="margin-total">

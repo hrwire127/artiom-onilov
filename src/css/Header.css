@@ -37,3 +37,10 @@ a {
 .text-center {
     text-align: center;
 }
+
+@media (max-width: 663px) {
+  header {
+    padding-bottom: 0px;
+    padding-top: 0px;
+  }
+}

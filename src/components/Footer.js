@@ -5,7 +5,7 @@ import useWindowSize from "../hooks/useWindowSize"
 
 function Footer()
 {
-    const [isPhoneSize] = useWindowSize(663, 0)
+    const [isPhoneSize] = useWindowSize(664, 0)
     const [Break] = useWindowSize(400, 0)
 
     return (
@@ -26,7 +26,7 @@ function Footer()
                     </div>
                 </>)
                 : (<>
-                    <div className="container">
+                    <div className="container" style={{ width: "100%" }}>
                         <p className="text-disabled" > Copyright © 2022 {Break && (<br />)} Artiom Onilov</p>
 
                         <div className="footer-contacts">

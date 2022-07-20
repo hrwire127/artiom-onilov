@@ -7,7 +7,7 @@ function YourSolution()
 {
     const [stage, setStage] = useState()
     const [ref, inView] = useInView()
-    const [isPhoneSize] = useWindowSize(663, 0)
+    const [isPhoneSize] = useWindowSize(664, 0)
 
     useEffect(() =>
     {

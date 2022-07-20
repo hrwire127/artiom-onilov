@@ -4,23 +4,46 @@ import useWindowSize from "../hooks/useWindowSize"
 
 function WebsiteIdeea()
 {
-    const [isPhoneSize] = useWindowSize(663, 0)
+    const [isPhoneSize] = useWindowSize(664, 0)
 
     return (
         <section className="margin-total">
             <Animate animation="opacity-anim-slow">
-                <div className="headline-center">I will bring your {isPhoneSize && (<br />)} <span className="blue">website</span> to life 🌳</div>
-            </Animate>
-            {!isPhoneSize
-                ? (<div className="container">
-                    <div className="websiteideea-profile shadow" />
-                    <div className="paragraph">
-                        <p className="text no-bottom ">The website you</p>
-                        <div className="text-collapsed" style={{ gap: 20 }}>
+                <div className="headline-center">
+                    <div className="text-collapsed" style={{ columnGap: 10, justifyContent: "center", flexWrap: "wrap" }}>
+                        <span className="black text">The website you</span>
+                        <div className="text-collapsed" style={{ gap: 10, justifyContent: "center", width: "fit-content"}}>
                             <span className="blue text">dreamed of </span>
                             <span className="blue text elevate-anim">☁</span>
                         </div>
-                        <p className="text"> now a <span className="black">reality</span></p>
+                    </div>
+                    now a <span className="blue">reality</span>
+                </div>
+            </Animate>
+            {!isPhoneSize
+                ? (<div className="container" style={{ justifyContent: "center", alignItems: "flex-end", width: "100%" }}>
+                    <img className="websiteideea-profile-1" alt="1-img" src="/images/pages/1.png" />
+                    <img className="websiteideea-profile-2" alt="2-1-img" src="/images/pages/1-2.png" />
+                </div>)
+                : (<div style={{
+                    position: "relative",
+                    display: "flex",
+                    justifyContent: "center",
+                }}>
+                    <img className="websiteideea-profile-1" alt="1-img" src="/images/pages/1.png" />
+                    <img
+                        className="websiteideea-profile-2"
+                        alt="2-1-img"
+                        src="/images/pages/1-2.png"
+                        style={{ position: "absolute", bottom: "-5%", right: "2%" }}
+                    />
+                </div>)}
+
+
+            {/* {!isPhoneSize
+                ? (<div className="container">
+                    <div className="websiteideea-profile shadow" />
+                    <div className="paragraph">
                     </div>
                 </div>)
                 : (<>
@@ -33,7 +56,7 @@ function WebsiteIdeea()
                         </div>
                         <p className="text"> now a <span className="black">reality</span></p>
                     </div>
-                </>)}
+                </>)} */}
         </section>
     )
 }

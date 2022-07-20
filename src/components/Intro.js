@@ -7,7 +7,7 @@ function Intro()
 {
     const [hightlight, setHighlight] = useState()
     const [contactText, setContactText] = useState("Contact Me")
-    const [isPhoneSize] = useWindowSize(663, 0)
+    const [isPhoneSize] = useWindowSize(664, 0)
 
     const types = [
         { name: "", color: "red" },

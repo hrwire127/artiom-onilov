@@ -4,58 +4,21 @@ import useWindowSize from "../hooks/useWindowSize"
 
 function AnyWebsite()
 {
-    const [isPhoneSize] = useWindowSize(663, 0)
+    const [isPhoneSize] = useWindowSize(664, 0)
 
     return (
         <section className="margin-total">
-            <div className="headline-center">Any type of website {isPhoneSize && (<br />) }You <span className="blue">Want</span> 💖</div>
+            <div className="headline-center">Any type of website {isPhoneSize && (<br />)}You <span className="blue">Want</span> 💖</div>
 
-            <section style={{ position: "relative", overflow: 'hidden' }}>
-                <div style={{
-                    width: "100%",
-                    height: "100%",
-                    position: "absolute",
-                    zIndex: 10
-                }} className="total-shadow" />
-                <div className="container-total">
-                    <section className="anywebsite-container anywebsite-slide">
-                        <div className="anywebsite-block shadow">
-                            <p className="name">ECommerce</p>
-                        </div>
-                        <div className="anywebsite-block shadow">
-                            <p className="name">Personal</p>
-                        </div>
-                        <div className="anywebsite-block shadow">
-                            <p className="name">Bussiness</p>
-                        </div>
-                        <div className="anywebsite-block shadow">
-                            <p className="name">Social</p>
-                        </div>
-                        <div className="anywebsite-block shadow">
-                            <p className="name">ECommerce</p>
-                        </div>
-                        <div className="anywebsite-block shadow">
-                            <p className="name">Personal</p>
-                        </div>
-                        <div className="anywebsite-block shadow">
-                            <p className="name">Bussiness</p>
-                        </div>
-                        <div className="anywebsite-block shadow">
-                            <p className="name">Social</p>
-                        </div>
-                        <div className="anywebsite-block shadow">
-                            <p className="name">ECommerce</p>
-                        </div>
-                        <div className="anywebsite-block shadow">
-                            <p className="name">Personal</p>
-                        </div>
-                        <div className="anywebsite-block shadow">
-                            <p className="name">Bussiness</p>
-                        </div>
-                        <div className="anywebsite-block shadow">
-                            <p className="name">Social</p>
-                        </div>
-                    </section>
+            <section className={isPhoneSize ? "blocks" : "container"}>
+                <div className="anywebsite-block shadow">
+                    <p className="name">Presented</p>
+                </div>
+                <div className="anywebsite-block shadow">
+                    <p className="name">Complex</p>
+                </div>
+                <div className="anywebsite-block shadow">
+                    <p className="name">Full</p>
                 </div>
             </section>
 

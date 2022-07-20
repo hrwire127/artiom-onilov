@@ -8,9 +8,7 @@ function Portofolio()
 {
     const [loading, setLoading] = useState(false)
     const [Stack] = useWindowSize(1000, 0)
-
-    console.log(Stack)
-
+    
     const visit = (url) =>
     {
         setLoading(true)

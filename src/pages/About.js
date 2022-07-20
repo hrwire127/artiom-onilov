@@ -8,8 +8,6 @@ function About()
     const [Stack] = useWindowSize(1230, 0)
     const [Small] = useWindowSize(881, 0)
 
-    console.log(Small)
-
     const AboutContainer = () => (
         <section className={!Stack ? "container" : ""} style={Stack ? { width: "fit-content" } : {}}>
             <div className="paragraph" >
