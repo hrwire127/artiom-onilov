@@ -11,9 +11,9 @@ function CallToAction()
 
     return (<>
         <section className="margin-total">
-            <div className={isPhoneSize ? "content-block" : "container"}>
-                {!isPhoneSize && (<div className="profile shadow" style={{ marginTop: 30 }} />)}
-                <div className="paragraph">
+            <div className={isPhoneSize ? "content-block" : "action-container"}>
+                {!isPhoneSize && (<img className="action-profile" style={{ marginTop: 30 }} alt="6-1-img" src="/images/pages/6-1.png" />)}
+                <div>
                     <div className={isPhoneSize ? "headline container-center" : "headline container-left"}>
                         I got your back
                         <Animate animation="glow-anim"><span>☀️</span></Animate>

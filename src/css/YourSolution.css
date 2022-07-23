@@ -1,0 +1,21 @@
+.solution-bg {
+  padding-top: 10px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: contain; /* Resize the background image to cover the entire container */
+}
+
+.profile-solution {
+   width: 30%; 
+}
+
+.container-solution {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 40px;
+}

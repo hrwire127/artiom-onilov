@@ -53,9 +53,9 @@ function YourSolution()
                     </div>
                 </div>
             </div>
-            <div className={isPhoneSize ? "content-block" : "container"}>
-                <div className="profile shadow" />
-                <div className="paragraph">
+            <div className={isPhoneSize ? "content-block" : "container-solution"}>
+                <img className="profile-solution" src="/images/pages/5-1.png" alt="5-1-img" />
+                <div style={{ width: "50%" }}>
                     <div className={isPhoneSize ? "headline-center" : "headline"}>No copying 📝</div>
                     {stage >= 0 ? (
                         <div className="text opacity-anim">Your <span className="blue">ideea</span></div>

@@ -36,6 +36,17 @@
   background-color: #45b2fbc9;
 }
 
+.action-profile {
+  width: 25%;
+}
+
+.action-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+
 @media (max-width: 1114px) {
   .back-to-top {
     width: 50px;

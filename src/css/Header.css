@@ -3,18 +3,15 @@ header {
   padding-bottom: 10px;
   padding-top: 10px;
 
+  background-color: black;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
-
-  border-bottom: 1px solid #d1d1d1;
 }
 
 .brand {
-  text-decoration: none;
-  font-size: 2rem;
-  color: #06283D;
-  font-weight: 600;
+  width: 50px;
 }
 
 .navigation {
@@ -24,7 +21,7 @@ header {
 
 a {
   text-decoration: none;
-  color:#45b2fbc9;
+  color: #45b2fbc9;
   font-weight: 700;
   transition: opacity 0.2s ease-in-out;
   cursor: pointer;
@@ -35,7 +32,7 @@ a {
 }
 
 .text-center {
-    text-align: center;
+  text-align: center;
 }
 
 @media (max-width: 663px) {

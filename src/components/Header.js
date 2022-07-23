@@ -6,7 +6,9 @@ function Header()
 {
     return (
         <header className="padding-total">
-            <Link className='brand' to="/"><div>AO</div></Link>
+            <Link className='brand' to="/">
+                <img src="/images/logo-light.png" alt="logo-img" className="brand"/>
+            </Link>
             <div className="navigation">
                 <Link to="portofolio">PORTOFOLIO</Link>
                 <Link to="about">ABOUT</Link>

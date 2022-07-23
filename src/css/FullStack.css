@@ -1,9 +1,6 @@
 .fullstack-profile {
-  width: 450px;
-  height: 350px;
-
+  height: 270px;
   border-radius: 16px;
-  background-color:#45b2fbc9;
 }
 
 .sub-headline {
@@ -20,7 +17,7 @@
 
 @media (max-width: 1114px) {
   .fullstack-profile {
-    width: 350px;
+    /* width: 350px; */
     height: 270px;
   }
   .sub-headline {
@@ -30,7 +27,7 @@
 
 @media (max-width: 880px) {
   .fullstack-profile {
-    width: 280px;
+    /* width: 280px; */
     height: 200px;
   }
 }

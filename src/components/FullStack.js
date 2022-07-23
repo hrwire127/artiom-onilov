@@ -10,7 +10,7 @@ function FullStack()
         <section className="margin-total">
             <div className="headline-center container-center" style={{ gap: 10, flexWrap: "wrap" }}>
                 <div>Full Stack</div>
-                <div className="container-left">
+                <div className="container-left" style={{ gap: "10px" }}>
                     Developer
                     <Animate animation="glow-anim"
                     ><span> 👑</span>
@@ -20,7 +20,7 @@ function FullStack()
             <div className={isPhoneSize ? "contact-block" : "container"}>
                 <section className="full-stack-container">
                     <p className="text-center sub-headline">CLIENT</p>
-                    <div className="fullstack-profile" />
+                    <img className="fullstack-profile shadow" src="/images/pages/2-1.png" alt="2-1-img" />
                     <Animate animation="opacity-anim-slow">
                         <p
                             className="text-center text"
@@ -31,7 +31,7 @@ function FullStack()
                 </section>
                 <section className="full-stack-container">
                     <p className="text-center sub-headline">SERVER</p>
-                    <div className="fullstack-profile" />
+                    <img className="fullstack-profile" src="/images/pages/2-2.png" alt="2-2-img" />
                     <Animate animation="opacity-anim-slow">
                         <p className="text-center text"
                         >
