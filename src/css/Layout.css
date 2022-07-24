@@ -228,6 +228,11 @@
     border-bottom-left-radius: 60px;
     border-bottom-right-radius: 60px;
   }
+  .rounded-layout {
+    position: relative;
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+  }
 }
 
 @media (max-width: 520px) {
@@ -244,14 +249,19 @@
   }
   .margin-total {
     padding-top: 60px;
-    padding-bottom: 260px;
+    padding-bottom: 100px;
+  }
+  .rounded-layout {
+    position: relative;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
   }
 }
 
 @media (max-width: 400px) {
   .padding-total {
-    padding-left: 5px!important;
-    padding-right: 5px!important;
+    padding-left: 7px!important;
+    padding-right: 7px!important;
   }
   a {
     font-size: 0.9rem;

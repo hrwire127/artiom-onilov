@@ -38,7 +38,7 @@ footer {
   }
 }
 
-@media (max-width: 663px) {
+@media (max-width: 664px) {
   footer {
     height: 120px;
     display: flex;

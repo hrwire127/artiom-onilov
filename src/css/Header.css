@@ -36,7 +36,7 @@ header {
   text-align: center;
 }
 
-@media (max-width: 663px) {
+@media (max-width: 664px) {
   header {
     padding-bottom: 0px;
     padding-top: 0px;
