@@ -53,7 +53,7 @@
   }
 }
 
-@media (max-width: 743px) {
+@media (max-width: 775px) {
   .container-fullstack {
     grid-template-columns: repeat(3, 136px);
     grid-template-rows: repeat(3, 136px);

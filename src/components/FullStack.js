@@ -5,7 +5,7 @@ import useWindowSize from "../hooks/useWindowSize"
 function FullStack()
 {
     const [isPhoneSize] = useWindowSize(664, 0)
-    const [NoText] = useWindowSize(743, 0)//491px
+    const [NoText] = useWindowSize(775, 0)//491px
     const [WrapTitle] = useWindowSize(491, 0)
 
     return (

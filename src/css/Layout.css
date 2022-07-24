@@ -1,4 +1,5 @@
 .padding-total {
+  margin-top: -1px;
   padding-left: calc((100% - 1180px) / 2);
   padding-right: calc((100% - 1180px) / 2);
 }
