@@ -4,28 +4,37 @@ textarea {
   padding-left: 20px;
   border-radius: 4px;
   outline: none;
-  border: 2px solid #45b2fbc9;
+  border: 1px solid #35497a;
+  background-color: #35497a;
   font-family: "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
     "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   font-size: 1.4rem;
+  color: white;
 
-  transition: border-color 0.1s ease-in-out;
+  transition: background-color 0.1s ease-in-out;
 }
 
 input:hover,
 textarea:hover {
-  border: 2px solid #9fe4ff;
+  background-color: #4761a3;
+  /* border: 2px solid #9fe4ff; */
 }
 
 input:focus,
 textarea:focus {
-  border: 2px solid #06283d;
+  background-color: #5a7acc;
+  /* border: 2px solid #06283d; */
 }
 
 textarea {
   resize: vertical;
   padding-top: 10px;
   height: 200px;
+}
+
+::placeholder {
+  /* Internet Explorer 10-11 */
+  color: rgb(176 199 209 / 50%);
 }
 
 form {
@@ -36,14 +45,14 @@ form {
   flex-direction: column;
   justify-content: center;
 
-  gap: 20px;
+  gap: 25px;
   margin-top: 60px;
 }
 
 .input-container {
   display: flex;
   justify-content: space-between;
-  gap: 20px;
+  gap: 25px;
 }
 
 .input-container input {

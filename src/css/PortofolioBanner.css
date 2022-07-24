@@ -1,12 +1,35 @@
+.portofolio-text {
+  font-weight: 400;
+  font-size: 1.8rem;
+  margin-bottom: 40px;
+  color: #a6b9c2;
+}
+
+.portofolio-text-container {
+  display: flex;
+  justify-content: left;
+  align-items: flex-end;
+  gap: 60px;
+}
+
 .portofolio-container {
   display: flex;
   justify-content: space-between;
+  align-items: end;
+  gap: 40px;
+}
+
+.portofolio-btn-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
   align-items: center;
+  margin-top: 40px;
 }
 
 .portofolio-block {
-  width: 250px;
-  height: 170px;
+  width: 50%;
+  padding-bottom: 32.25%;
 
   border-radius: 16px;
 
@@ -33,7 +56,7 @@
 }
 
 @media (max-width: 1114px) {
-  .portofolio-block  {
+  .portofolio-block {
     width: 200px;
     height: 130px;
   }
@@ -44,7 +67,7 @@
 }
 
 @media (max-width: 880px) {
-  .portofolio-block  {
+  .portofolio-block {
     width: 160px;
     height: 100px;
   }

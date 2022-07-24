@@ -1,10 +1,14 @@
 footer {
   height: 60px;
-  border-top: 1px solid #d1d1d1;
+  background-color: #1a2c5b;
 
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.brand-footer {
+  width: 40px;
 }
 
 .footer-contacts {

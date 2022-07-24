@@ -9,62 +9,6 @@ function Intro()
     const [contactText, setContactText] = useState("Contact Me")
     const [isPhoneSize] = useWindowSize(664, 0)
 
-    const types = [
-        { name: "", color: "red" },
-        { name: "Web Designer", color: "red" },
-        { name: "Engineer", color: "green" },
-        { name: "Freelancer", color: "purple" },
-        { name: "Web Developer", color: "#1363df" }
-    ]
-
-    const timeout = (delay) =>
-    {
-        return new Promise(async (resolve, reject) =>
-        {
-            setTimeout(() =>
-            {
-                resolve()
-            }, delay)
-        })
-    }
-
-    useEffect(() =>
-    {
-        (async function i()
-        {
-            setHighlight(0)
-            await timeout(400)
-            setHighlight(null)
-            await timeout(100)
-            setHighlight(1)
-            await timeout(600)
-            setHighlight(null)
-            await timeout(100)
-            setHighlight(2)
-            await timeout(600)
-            setHighlight(null)
-            await timeout(100)
-            setHighlight(3)
-            await timeout(600)
-            setHighlight(null)
-            await timeout(100)
-            setHighlight(4)
-        })()
-    }, [])
-
-
-    const Highlight = () => hightlight
-        ? (<p
-            className={`blue text ${hightlight < types.length - 1 ? "opacity-anim" : ""}`}
-            style={{ color: types[hightlight].color }}>
-            {types[hightlight].name}
-        </p>)
-        : (<p
-            className="blue text"
-            style={{ opacity: 0 }}
-        >
-            {"."}
-        </p>)
 
     return (<section className="container margin-total padding-total"
         style={{
@@ -84,7 +28,6 @@ function Intro()
                     Your favorite Web Developer ❤
                 </div>
             </div>
-            {/* <Highlight /> */}
             <div className="btn-container-left">
                 <Link
                     activeClass="active"

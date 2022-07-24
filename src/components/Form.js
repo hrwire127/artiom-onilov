@@ -176,8 +176,10 @@ function Form()
                 value={toSend.message.value}
                 onChange={handleChange}
             />
-            <div className="btn-container-center">
-                <button className={sending ? "btn-disabled" : "action-btn"} type={sending ? "submit" : ""}>SEND ✉</button>
+            <div className="portofolio-btn-container">
+                <button className="action-btn-m">
+                    <span>Send ✉</span>
+                </button>
             </div>
         </form>
     )
