@@ -88,7 +88,7 @@
   padding-top: 6px;
   font-size: 2rem;
   font-weight: 500;
-  color: #06283d;
+  color: #1a2c5b;
 }
 
 .item-title-light {
@@ -96,7 +96,7 @@
   padding-top: 6px;
   font-size: 2rem;
   font-weight: 500;
-  color: #dce3e7;
+  color: #B8DFF0;
 }
 
 .item-repo {
@@ -160,6 +160,10 @@
   align-items: center;
 }
 
+.portofolio-headline {
+  margin-top: 0;
+}
+
 @media (max-width: 1114px) {
   .huge-row {
     height: 400px;
@@ -181,6 +185,13 @@
     /* flex: 1 500px; */
   }
 }
+
+@media (max-width: 664px) {
+  .portofolio-headline {
+    margin-top: 30px;
+  }
+}
+
 
 @media (max-width: 662px) {
   .item-title-dark,

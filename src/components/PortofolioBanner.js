@@ -8,7 +8,7 @@ function PortofolioBanner()
     const [NoSubheadline] = useWindowSize(883, 0)
     const [contactText, setContactText] = useState("See All")
 
-    return (<div style={{ backgroundColor: "#1A2C5B" }} >
+    return (<div style={{ backgroundColor: "#1A2C5B" }}>
         <section className="margin-total padding-total  rounded-layout"
             style={{
                 backgroundColor: "#3E4E88",

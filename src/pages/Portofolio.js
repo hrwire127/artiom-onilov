@@ -8,22 +8,32 @@ function Portofolio()
 {
     const [loading, setLoading] = useState(false)
     const [Stack] = useWindowSize(1000, 0)
-    
+
     const visit = (url) =>
     {
         setLoading(true)
         window.location = url
     }
 
-    return (
-        <section className="margin-total-sm">
-            <div className="headline-center">My projects 📘</div>
-            <div className="sub-headline text-center">dive in!</div>
+    return (<div style={{ backgroundColor: "#1A2C5B" }}>
+        <section
+            className="margin-total padding-total padding-total-intro rounded-layout"
+            style={{
+                backgroundColor: "#f2f2f2"
+            }}>
+            <div className="portofolio-text-container">
+                <div
+                    className="headline-sm text-center portofolio-headline"
+                >
+                    My Projects
+                </div>
+            </div>
+
             {!Stack
                 ? (<section className="containers">
                     <div className="portofolio-container-diff">
                         <div className="huge-row">
-                            <div className="portofolio-item item shadow"
+                            <div className="portofolio-item item"
                                 onClick={() => visit("https://murmuring-wave-59408.herokuapp.com/")}
                             >
                                 <div className="item-title-dark">
@@ -42,7 +52,7 @@ function Portofolio()
                             </div>
                         </div>
                         <div className="small-row">
-                            <div className="portofolio-item item-sm shadow"
+                            <div className="portofolio-item item-sm"
                                 onClick={() => visit("https://yahtzee39.herokuapp.com/")}
                             >
                                 <div className="item-title-dark">
@@ -59,7 +69,7 @@ function Portofolio()
                                     </a>
                                 </div>
                             </div>
-                            <div className="portofolio-item item-sm shadow"
+                            <div className="portofolio-item item-sm"
                                 onClick={() => visit("https://glacial-waters-83977.herokuapp.com/")}
                             >
                                 <div className="item-title-dark">
@@ -80,7 +90,7 @@ function Portofolio()
                     </div>
                     <div className="portofolio-container-diff">
                         <div className="small-row">
-                            <div className="portofolio-item item-sm shadow"
+                            <div className="portofolio-item item-sm"
                                 onClick={() => visit("https://todo-list39.herokuapp.com/")}
                             >
                                 <div className="item-title-dark">
@@ -97,7 +107,7 @@ function Portofolio()
                                     </a>
                                 </div>
                             </div>
-                            <div className="portofolio-item item-sm shadow"
+                            <div className="portofolio-item item-sm"
                                 onClick={() => visit("https://dad-jokes31.herokuapp.com/")}
                             >
                                 <div className="item-title-dark">
@@ -116,7 +126,7 @@ function Portofolio()
                             </div>
                         </div>
                         <div className="huge-row">
-                            <div className="portofolio-item item shadow"
+                            <div className="portofolio-item item"
                                 onClick={() => visit("https://color-palette-998d.herokuapp.com/")}
                             >
                                 <div className="item-title-dark">
@@ -136,7 +146,7 @@ function Portofolio()
                         </div>
                     </div>
                     <div className="portofolio-container-normal">
-                        <div className="portofolio-item item-normal shadow"
+                        <div className="portofolio-item item-normal"
                             onClick={() => visit("https://lights-out39.herokuapp.com/")}
                         >
                             <div className="item-title-dark">
@@ -153,7 +163,7 @@ function Portofolio()
                                 </a>
                             </div>
                         </div>
-                        <div className="portofolio-item item-normal shadow"
+                        <div className="portofolio-item item-normal"
                             onClick={() => visit("https://hangman39.herokuapp.com/")}
                         >
                             <div className="item-title-dark">
@@ -170,7 +180,7 @@ function Portofolio()
                                 </a>
                             </div>
                         </div>
-                        <div className="portofolio-item item-normal shadow"
+                        <div className="portofolio-item item-normal"
                             onClick={() => visit("https://todo-hooks39.herokuapp.com/")}
                         >
                             <div className="item-title-dark">
@@ -189,7 +199,7 @@ function Portofolio()
                         </div>
                     </div>
                     <div className="portofolio-container-normal">
-                        <div className="portofolio-item item-normal shadow"
+                        <div className="portofolio-item item-normal"
                             onClick={() => visit("https://deck-cards39.herokuapp.com/")}
                         >
                             <div className="item-title-dark">
@@ -211,7 +221,7 @@ function Portofolio()
                     </div>
                 </section>)
                 : (<section className="containers">
-                    <div className="portofolio-item item shadow"
+                    <div className="portofolio-item item"
                         onClick={() => visit("https://murmuring-wave-59408.herokuapp.com/")}
                     >
                         <div className="item-title-dark">
@@ -228,7 +238,7 @@ function Portofolio()
                             </a>
                         </div>
                     </div>
-                    <div className="portofolio-item item shadow"
+                    <div className="portofolio-item item"
                         onClick={() => visit("https://yahtzee39.herokuapp.com/")}
                     >
                         <div className="item-title-dark">
@@ -245,7 +255,7 @@ function Portofolio()
                             </a>
                         </div>
                     </div>
-                    <div className="portofolio-item item shadow"
+                    <div className="portofolio-item item"
                         onClick={() => visit("https://glacial-waters-83977.herokuapp.com/")}
                     >
                         <div className="item-title-dark">
@@ -262,7 +272,7 @@ function Portofolio()
                             </a>
                         </div>
                     </div>
-                    <div className="portofolio-item item shadow"
+                    <div className="portofolio-item item"
                         onClick={() => visit("https://todo-list39.herokuapp.com/")}
                     >
                         <div className="item-title-dark">
@@ -279,7 +289,7 @@ function Portofolio()
                             </a>
                         </div>
                     </div>
-                    <div className="portofolio-item item shadow"
+                    <div className="portofolio-item item"
                         onClick={() => visit("https://dad-jokes31.herokuapp.com/")}
                     >
                         <div className="item-title-dark">
@@ -296,7 +306,7 @@ function Portofolio()
                             </a>
                         </div>
                     </div>
-                    <div className="portofolio-item item shadow"
+                    <div className="portofolio-item item"
                         onClick={() => visit("https://color-palette-998d.herokuapp.com/")}
                     >
                         <div className="item-title-dark">
@@ -313,7 +323,7 @@ function Portofolio()
                             </a>
                         </div>
                     </div>
-                    <div className="portofolio-item item shadow"
+                    <div className="portofolio-item item"
                         onClick={() => visit("https://lights-out39.herokuapp.com/")}
                     >
                         <div className="item-title-dark">
@@ -330,7 +340,7 @@ function Portofolio()
                             </a>
                         </div>
                     </div>
-                    <div className="portofolio-item item shadow"
+                    <div className="portofolio-item item"
                         onClick={() => visit("https://hangman39.herokuapp.com/")}
                     >
                         <div className="item-title-dark">
@@ -347,7 +357,7 @@ function Portofolio()
                             </a>
                         </div>
                     </div>
-                    <div className="portofolio-item item shadow"
+                    <div className="portofolio-item item"
                         onClick={() => visit("https://todo-hooks39.herokuapp.com/")}
                     >
                         <div className="item-title-dark">
@@ -364,7 +374,7 @@ function Portofolio()
                             </a>
                         </div>
                     </div>
-                    <div className="portofolio-item item shadow"
+                    <div className="portofolio-item item"
                         onClick={() => visit("https://deck-cards39.herokuapp.com/")}
                     >
                         <div className="item-title-dark">
@@ -389,6 +399,7 @@ function Portofolio()
                     <Spinner />
                 </div>)}
         </section >
+    </div>
     )
 }
 
