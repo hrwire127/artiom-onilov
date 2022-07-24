@@ -5,6 +5,7 @@ import useWindowSize from "../hooks/useWindowSize"
 function PortofolioBanner()
 {
     const [isPhoneSize] = useWindowSize(664, 0)
+    const [NoSubheadline] = useWindowSize(883, 0)
     const [contactText, setContactText] = useState("See All")
 
     return (<div style={{ backgroundColor: "#1A2C5B" }} >
@@ -20,30 +21,39 @@ function PortofolioBanner()
                 >
                     Latest Projects
                 </div>
-                <div className="text-collapsed portofolio-text">
-                    Here are some of my recent projects ☁
-                </div>
+                {!NoSubheadline && (
+                    <div className="text-collapsed portofolio-text">
+                        Here are some of my recent projects ☁
+                    </div>
+                )}
             </div>
-            {/* <div className="text-container text-center">
-                <div className="text-collapsed ">
-                    Check Out My Portofolio
-                </div>
-            </div> */}
-            <div className="portofolio-container">
-                <div className="portofolio-block">
-                    {/* <p className="name">Ctice</p> */}
-                </div>
-                <div className="portofolio-block">
-                    {/* <p className="name">Color Palette</p> */}
-                </div>
-            </div>
-            <div className="portofolio-container" style={{ marginTop: 40 }}>
-                <div className="portofolio-block">
-                </div>
-                <div className="portofolio-block">
-                </div>
-            </div>
-            <Link to="portofolio" style={{textDecoration: "none"}}>
+
+            {!isPhoneSize
+                ? (<>
+                    <div className="portofolio-container">
+                        <div className="portofolio-block">
+                        </div>
+                        <div className="portofolio-block">
+                        </div>
+                    </div>
+                    <div className="portofolio-container" style={{ marginTop: 40 }}>
+                        <div className="portofolio-block">
+                        </div>
+                        <div className="portofolio-block">
+                        </div>
+                    </div>
+                </>)
+                : (<>
+                    <div className="portofolio-container">
+                        <div className="portofolio-block">
+                        </div>
+                    </div>
+                    <div className="portofolio-container" style={{ marginTop: 40 }}>
+                        <div className="portofolio-block">
+                        </div>
+                    </div>
+                </>)}
+            <Link to="portofolio" style={{ textDecoration: "none" }}>
                 <div className="portofolio-btn-container">
                     <button
                         className="action-btn-m"

@@ -56,19 +56,19 @@
 }
 
 @media (max-width: 1114px) {
-  .portofolio-block {
-    width: 200px;
-    height: 130px;
-  }
   .portofolio-palceholder {
     width: 100px;
     height: 100px;
   }
 }
 
-@media (max-width: 882px) {
-  .portofolio-block {
-    width: 160px;
+@media (max-width: 664px) {
+  .portofolio-palceholder {
+    width: 100px;
     height: 100px;
+  }
+  .portofolio-block {
+    width: 100%;
+    padding-bottom: 64.5%;
   }
 }
