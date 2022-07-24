@@ -32,8 +32,8 @@ function CallToAction()
                     </div>
                 </div>
                 <Form />
-                <div className="sub-headline text-center"
-                    style={{ fontSize: "1.2rem", marginTop: "20px", color: "rgb(176 199 209 / 50%)" }}
+                <div className="sub-headline text-center text-disabled"
+                    style={{ fontSize: "1.2rem", marginTop: "20px" }}
                 >
                     contact@artiomonilov.com
                 </div>

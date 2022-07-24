@@ -29,7 +29,7 @@ footer {
 }
 
 .text-disabled {
-  color: gray !important;
+  color: rgb(176 199 209 / 50%);
 }
 
 @media (max-width: 780px) {
