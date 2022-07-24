@@ -12,7 +12,7 @@ function WebsiteIdeea()
                 <div className="headline-sm text-center">I Can Build Your Website </div>
                 <div className="text-container text-center">
                     <div className="text-collapsed ">
-                        Your web project 📽 can now become a reality.
+                        Your web project 📽 can now {isPhoneSize && (<br />)} become a reality.
                     </div>
                 </div>
             </Animate>
