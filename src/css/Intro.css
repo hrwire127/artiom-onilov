@@ -1,9 +1,7 @@
 .profile {
   width: 450px;
-  height: 450px;
 
   border-radius: 16px;
-  background-color: #3e4e88;
 }
 
 .headline {
@@ -62,47 +60,133 @@
   margin-bottom: 64px;
 }
 
+.padding-total-intro {
+  padding-top: 120px !important;
+}
+
 @media (max-width: 1114px) {
   .headline {
-    font-size: 2rem;
+    font-size: 3.7rem;
+  }
+  .text-collapsed {
+    font-size: 1.4rem;
+  }
+  .text-container {
+    margin-bottom: 50px;
   }
   .profile {
     width: 400px;
     height: 400px;
   }
+  .action-btn-m {
+    padding: 12px !important;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+    height: 50px !important;
+
+    font-size: 1.2rem !important;
+  }
+  .padding-total-intro {
+    padding-top: 60px !important;
+  }
 }
 
-@media (max-width: 880px) {
+@media (max-width: 882px) {
   .headline {
-    font-size: 1.5rem;
+    font-size: 3rem;
+  }
+  .text-collapsed {
+    font-size: 1.1rem;
   }
   .profile {
     width: 300px;
     height: 300px;
   }
+  .action-btn-m {
+    padding: 12px !important;
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+    height: 40px !important;
+
+    font-size: 1rem !important;
+  }
 }
 
-@media (max-width: 663px) {
+@media (max-width: 727px) {
+  .headline {
+    font-size: 2.8rem;
+  }
   .text-collapsed {
-    justify-content: center;
+    font-size: 1rem;
   }
-  .text {
+  .profile {
+    width: 280px;
+    height: 280px;
+  }
+  .action-btn-m {
+    padding: 11px !important;
+    padding-left: 13px !important;
+    padding-right: 13px !important;
+    height: 37px !important;
+
+    font-size: 0.9rem !important;
+  }
+}
+
+@media (max-width: 684px) {
+  .headline {
+    font-size: 2.6rem;
+  }
+  .text-collapsed {
+    font-size: 0.9rem;
+  }
+  .profile {
+    width: 260px;
+    height: 260px;
+  }
+  .action-btn-m {
+    padding: 10px !important;
+    padding-left: 12.5px !important;
+    padding-right: 12.5px !important;
+    height: 35px !important;
+
+    font-size: 0.8rem !important;
+  }
+}
+
+@media (max-width: 664px) {
+  .headline {
+    font-size: 10vw;
     text-align: center;
-  }
-  .btn-container-left {
-    justify-content: center;
-  }
-  .paragraph {
-    margin-top: 30px;
   }
   .profile {
     margin: auto;
+    width: 80%;
+    height: 80%;
   }
-}
+  .paragraph {
+    text-align: center;
+  }
+  .btn-intro {
+    justify-content: center;
+  }
+  .text-collapsed {
+    font-size: 5vw;
+  }
+  .text-container {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  .action-btn-m {
+    padding: 2vw !important;
+    padding-left: 5vw !important;
+    padding-right: 5vw !important;
+    height: 12.4vw !important;
 
-@media (max-width: 400px) {
-  .profile {
-    width: 250px;
-    height: 250px;
+    font-size: 5vw !important;
+  }
+  .padding-total-intro {
+    padding-top: 20px !important;
+    padding-bottom: 60px !important;
   }
 }

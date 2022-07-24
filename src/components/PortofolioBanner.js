@@ -8,12 +8,9 @@ function PortofolioBanner()
     const [contactText, setContactText] = useState("See All")
 
     return (<div style={{ backgroundColor: "#1A2C5B" }} >
-        <section className="margin-total padding-total"
+        <section className="margin-total padding-total  rounded-layout"
             style={{
                 backgroundColor: "#3E4E88",
-                position: "relative",
-                borderBottomLeftRadius: "120px",
-                borderBottomRightRadius: "120px",
             }}
         // style={isPhoneSize ? { textAlign: "center" } : {}}
         >
@@ -46,15 +43,16 @@ function PortofolioBanner()
                 <div className="portofolio-block">
                 </div>
             </div>
-            <div className="portofolio-btn-container">
-                <button
-                    className="action-btn-m"
-                    onMouseEnter={() => setContactText("See All >")}
-                    onMouseLeave={() => setContactText("See All")}
-                >
-                    <span>{contactText}</span>
-                </button>
-            </div>
+            <Link to="portofolio" style={{textDecoration: "none"}}>
+                <div className="portofolio-btn-container">
+                    <button
+                        className="action-btn-m"
+                        onMouseEnter={() => setContactText("See All >")}
+                        onMouseLeave={() => setContactText("See All")}
+                    >
+                        <span>{contactText}</span>
+                    </button>
+                </div>            </Link>
             {
                 // isPhoneSize
                 //     ? (<Link to="portofolio" >{"BROWSE PORTOFOLIO"}</Link>)

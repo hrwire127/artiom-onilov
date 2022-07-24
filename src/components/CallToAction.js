@@ -13,7 +13,6 @@ function CallToAction()
         <section className="margin-total padding-total"
             style={{
                 backgroundColor: "#1A2C5B",
-                position: "relative",
             }}>
             <Element name="test1" className="element">
                 <Animate animation="opacity-anim-slow">

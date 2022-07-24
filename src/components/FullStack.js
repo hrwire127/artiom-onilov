@@ -8,12 +8,9 @@ function FullStack()
 
     return (
         <div style={{ backgroundColor: "#3E4E88" }}>
-            <section className="margin-total padding-total"
+            <section className="margin-total padding-total rounded-layout"
                 style={{
                     backgroundColor: "white",
-                    position: "relative",
-                    borderBottomLeftRadius: "120px",
-                    borderBottomRightRadius: "120px",
                 }}>
                 <div className="headline-sm text-center">All in one Developer ♛</div>
                 <div className="text-container text-center">

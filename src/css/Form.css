@@ -60,7 +60,7 @@ form {
   min-width: 20px;
 }
 
-@media (max-width: 880px) {
+@media (max-width: 882px) {
   form {
     width: 100%;
   }
