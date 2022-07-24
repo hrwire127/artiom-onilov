@@ -66,6 +66,12 @@ form {
   }
 }
 
+@media (max-width: 664px) {
+  textarea {
+    height: 150px;
+  }
+}
+
 @media (max-width: 400px) {
   input,
   textarea {
@@ -75,5 +81,8 @@ form {
   }
   textarea {
     height: 100px;
+  }
+  .portofolio-btn-container {
+    margin-top: 10px;
   }
 }
