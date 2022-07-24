@@ -44,8 +44,8 @@ function Home()
             <Intro />
             <WebsiteIdeea />
             <FullStack />
-            <AnyWebsite />
-            <YourSolution />
+            {/* <AnyWebsite /> */}
+            {/* <YourSolution /> */}
             {/* <Workflow /> */}
             <PortofolioBanner />
             <CallToAction />

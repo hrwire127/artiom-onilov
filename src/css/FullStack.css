@@ -1,6 +1,7 @@
-.fullstack-profile {
-  height: 270px;
-  border-radius: 16px;
+.fullstack-img {
+  height: 100px;
+  width: 100px;
+  border-radius: 120px;
 }
 
 .sub-headline {
@@ -9,10 +10,20 @@
 }
 
 .full-stack-container {
+  width: 20%;
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
+}
+
+.container-fullstack {
+  text-align: center;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
 }
 
 @media (max-width: 1114px) {

@@ -3,7 +3,7 @@ header {
   padding-bottom: 10px;
   padding-top: 10px;
 
-  background-color: black;
+  background-color: #f2f2f2;
 
   display: flex;
   justify-content: space-between;
@@ -19,16 +19,17 @@ header {
   gap: 20px;
 }
 
-a {
+.header-link {
   text-decoration: none;
-  color: #45b2fbc9;
-  font-weight: 700;
+  color: #1a2c5b;
+  font-weight: 600;
+  opacity: 0.6;
   transition: opacity 0.2s ease-in-out;
   cursor: pointer;
 }
 
-.navigation a:hover {
-  opacity: 0.5;
+.header-link:hover {
+  opacity: 1;
 }
 
 .text-center {

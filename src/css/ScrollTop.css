@@ -25,7 +25,8 @@
   height: 70px;
 
   border-radius: 100px;
-  background-color:#45b2fbc9;
+  background-color:#7971EA;
+  color: white;
   transition: background-color 0.3s ease-in-out;
 
   animation-name: appear;
@@ -33,14 +34,14 @@
 }
 
 .scroll-top:hover {
-  background-color: #74d3f8;
+  color: #7971ea;
+  background-color: #b8dff0;
   cursor: pointer;
 }
 
 .icon-top {
   transform: rotate(270deg);
-  color: white;
-  font-size: 2.5rem;
+  font-size: 2rem;
   margin-top: -10px;
   margin-left: -4px;
 }

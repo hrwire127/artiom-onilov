@@ -1,16 +1,33 @@
 .profile {
-  width: 500px;
-  height: 500px;
+  width: 450px;
+  height: 450px;
 
   border-radius: 16px;
-  background-color: #1363df;
+  background-color: #3e4e88;
 }
 
 .headline {
-  font-size: 3rem;
+  font-size: 5rem;
   font-weight: 700;
   margin-bottom: 25px;
-  color: #06283d;
+  margin-top: 25px;
+  color: #1a2c5b;
+}
+
+.headline-sm {
+  font-size: 3.6rem;
+  font-weight: 700;
+  margin-bottom: 25px;
+  margin-top: 25px;
+  color: #1a2c5b;
+}
+
+.headline-xs {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  color: #1a2c5b;
 }
 
 .btn-container-left {
@@ -28,9 +45,17 @@
 }
 
 .text-collapsed {
-  width: 100%;
-  display: flex;
-  justify-content: left;
+  font-size: 2rem;
+  color: #868686;
+}
+
+.text-collapsed-xs {
+  font-size: 1rem;
+  color: #868686;
+}
+
+.text-container {
+  margin-bottom: 60px;
 }
 
 .text-margin-bottom {

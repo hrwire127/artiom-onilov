@@ -7,17 +7,13 @@ function WebsiteIdeea()
     const [isPhoneSize] = useWindowSize(664, 0)
 
     return (
-        <section className="margin-total">
+        <section className="margin-total padding-total">
             <Animate animation="opacity-anim-slow">
-                <div className="headline-center">
-                    <div className="text-collapsed" style={{ columnGap: 10, justifyContent: "center", flexWrap: "wrap" }}>
-                        <span className="black text">The website you</span>
-                        <div className="text-collapsed" style={{ gap: 10, justifyContent: "center", width: "fit-content"}}>
-                            <span className="blue text">dreamed of </span>
-                            <span className="blue text elevate-anim">☁</span>
-                        </div>
+                <div className="headline-sm text-center">I Can Build Your Website </div>
+                <div className="text-container text-center">
+                    <div className="text-collapsed ">
+                        Your web project 📽 can now become a reality.
                     </div>
-                    now a <span className="blue">reality</span>
                 </div>
             </Animate>
             {!isPhoneSize

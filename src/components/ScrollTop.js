@@ -8,17 +8,18 @@ function ScrollTop()
     const [y, setY] = useState(window.scrollY);
 
     const maxTopDistance = -1000
-    const minTopDistance = -5000
+    const minTopDistance = -4000
     const scrollDuration = 1000
 
     const handleNavigation = useCallback(e =>
     {
         const window = e.currentTarget;
+
+        const header = document.querySelector('header');
+        const distanceToTop = header.getBoundingClientRect().top;
+
         if (y > window.scrollY)
         {
-            const header = document.querySelector('header');
-            const distanceToTop = header.getBoundingClientRect().top;
-
             if (distanceToTop < maxTopDistance && !blocked)
             {
                 setToggled(true)
@@ -27,6 +28,10 @@ function ScrollTop()
             {
                 setToggled(false)
             }
+        }
+        else if(distanceToTop < minTopDistance && !blocked)
+        {
+            setToggled(true)
         }
         else if (!blocked)
         {
