@@ -52,9 +52,9 @@
   .info-text {
     font-size: 1.5rem;
   }
-  .content {
+  /* .content {
     background-color: #1a2c5b;
-  }
+  } */
 }
 
 @media (max-width: 881px) {

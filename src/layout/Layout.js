@@ -9,7 +9,7 @@ function Layout(props)
 {
     return (<main style={{ minHeight: "100vh", display: "flex", flexDirection: "column", justifyContent: "space-between" }}>
         <Header />
-        <div className="content" style={{ flex: 1 }}>{props.children}</div>
+        {props.children}
         <Footer />
         <ScrollTop />
     </main>)

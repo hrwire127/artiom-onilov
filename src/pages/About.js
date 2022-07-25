@@ -140,37 +140,44 @@ function About()
         </section>
     )
 
-    return (<div style={{ backgroundColor: "#1A2C5B" }}>
-        <div className="margin-total 
+    return (
+        <div className="content"
+            style={{
+                flex: 1,
+                backgroundColor: "#1A2C5B"
+            }}
+        >
+            <div className="margin-total 
         padding-total 
         padding-total-intro 
         rounded-layout 
         full-container"
-            style={{
-                backgroundColor: "#f2f2f2"
-            }}>
-            {!Stack || Small
-                ? (
-                    <div style={{ width: "100%" }} className="center-container">
-                        <Animate animation="step-anim" start>
-                            <AboutContainer />
-                            <SkillContainer />
-                        </Animate>
-                    </div>)
-                : (
-                    <>
+                style={{
+                    backgroundColor: "#f2f2f2"
+                }}
+            >
+                {!Stack || Small
+                    ? (
                         <div style={{ width: "100%" }} className="center-container">
                             <Animate animation="step-anim" start>
                                 <AboutContainer />
+                                <SkillContainer />
                             </Animate>
-                        </div>
-                        <Animate animation="step-anim" start>
-                            <SkillContainer />
-                        </Animate>
-                    </>)}
+                        </div>)
+                    : (
+                        <>
+                            <div style={{ width: "100%" }} className="center-container">
+                                <Animate animation="step-anim" start>
+                                    <AboutContainer />
+                                </Animate>
+                            </div>
+                            <Animate animation="step-anim" start>
+                                <SkillContainer />
+                            </Animate>
+                        </>)}
 
+            </div>
         </div>
-    </div>
     )
 }
 

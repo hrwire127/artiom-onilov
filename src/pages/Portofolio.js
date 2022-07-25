@@ -11,7 +11,7 @@ function Portofolio()
     const [loading, setLoading] = useState(false)
     const [NoSubheadline] = useWindowSize(883, 0)
 
-    return (<div style={{ backgroundColor: "#1A2C5B" }}>
+    return (<div style={{ backgroundColor: "#1A2C5B", flex: 1 }} className="content">
         <section
             className="margin-total padding-total padding-total-intro rounded-layout"
             style={{

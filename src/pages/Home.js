@@ -40,7 +40,7 @@ function Home()
 
 
     return (
-        <div>
+        <div className="content" style={{ flex: 1 }}>
             <Intro />
             <WebsiteIdeea />
             <FullStack />
