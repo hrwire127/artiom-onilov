@@ -28,6 +28,8 @@
 }
 
 .portofolio-block {
+  position: relative;
+
   width: 50%;
   padding-bottom: 32.25%;
 
@@ -39,7 +41,23 @@
   align-items: center;
   text-align: center;
 
-  background-color: rgba(0, 0, 0, 0.486);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.portofolio-title {
+  position: absolute;
+  top: 0%;
+  left: 0;
+
+  padding-left: 16px;
+  padding-top: 6px;
+  font-size: 3vw;
+  /* font-size: 2rem; */
+  font-weight: 500;
+  color: #1a2c5b;
+  z-index: 2;
 }
 
 .portofolio-palceholder {
@@ -70,5 +88,8 @@
   .portofolio-block {
     width: 100%;
     padding-bottom: 64.5%;
+  }
+  .portofolio-title {
+    font-size: 6vw;
   }
 }

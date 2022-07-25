@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import Animate from './Animate'
 import { Link } from "react-router-dom"
 import useWindowSize from "../hooks/useWindowSize"
+import PortofolioItem from './PortofolioItem'
 
 function PortofolioBanner()
 {
@@ -32,25 +33,81 @@ function PortofolioBanner()
                 {!isPhoneSize
                     ? (<>
                         <div className="portofolio-container">
-                            <div className="portofolio-block">
+                            <div
+                                style={{
+                                    backgroundImage: `url("/images/portofolio/ctice.png")`
+                                }}
+                                alt="portofolio-img"
+                                className="portofolio-block"
+                            >
+                                <div className="portofolio-title">
+                                    Ctice 📚
+                                </div>
                             </div>
-                            <div className="portofolio-block">
+                            <div
+                                style={{
+                                    backgroundImage: `url("/images/portofolio/yahtzee.png")`
+                                }}
+                                alt="portofolio-img"
+                                className="portofolio-block"
+                            >
+                                <div className="portofolio-title">
+                                    Yahtzee 🎲
+                                </div>
                             </div>
                         </div>
                         <div className="portofolio-container" style={{ marginTop: 40 }}>
-                            <div className="portofolio-block">
+                            <div
+                                style={{
+                                    backgroundImage: `url("/images/portofolio/palettegenerator.png")`
+                                }}
+                                alt="portofolio-img"
+                                className="portofolio-block"
+                            >
+                                <div className="portofolio-title">
+                                    Palette Generator 🎨
+                                </div>
+
                             </div>
-                            <div className="portofolio-block">
+                            <div
+                                style={{
+                                    backgroundImage: `url("/images/portofolio/opal.png")`
+                                }}
+                                alt="portofolio-img"
+                                className="portofolio-block"
+                            >
+                                <div className="portofolio-title">
+                                    Opal ♦
+                                </div>
+
                             </div>
                         </div>
                     </>)
                     : (<>
                         <div className="portofolio-container">
-                            <div className="portofolio-block">
+                            <div
+                                style={{
+                                    backgroundImage: `url("/images/portofolio/ctice.png")`
+                                }}
+                                alt="portofolio-img"
+                                className="portofolio-block"
+                            >
+                                <div className="portofolio-title">
+                                    Ctice 📚
+                                </div>
                             </div>
                         </div>
                         <div className="portofolio-container" style={{ marginTop: 40 }}>
-                            <div className="portofolio-block">
+                            <div
+                                style={{
+                                    backgroundImage: `url("/images/portofolio/yahtzee.png")`
+                                }}
+                                alt="portofolio-img"
+                                className="portofolio-block"
+                            >
+                                <div className="portofolio-title">
+                                    Yahtzee 🎲
+                                </div>
                             </div>
                         </div>
                     </>)}
