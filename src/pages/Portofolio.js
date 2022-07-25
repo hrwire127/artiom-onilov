@@ -1,20 +1,15 @@
 import React, { useState } from 'react'
 import Animate from '../components/Animate'
-import { Link } from "react-router-dom";
 import Spinner from '../components/Spinner';
 import useWindowSize from "../hooks/useWindowSize"
+import PortofolioItem from '../components/PortofolioItem'
 import "../css/Portofolio.css"
 
 function Portofolio()
 {
-    const [loading, setLoading] = useState(false)
     const [Stack] = useWindowSize(1000, 0)
-
-    const visit = (url) =>
-    {
-        setLoading(true)
-        window.location = url
-    }
+    const [loading, setLoading] = useState(false)
+    const [NoSubheadline] = useWindowSize(883, 0)
 
     return (<div style={{ backgroundColor: "#1A2C5B" }}>
         <section
@@ -30,6 +25,11 @@ function Portofolio()
                     >
                         My Projects
                     </div>
+                    {!NoSubheadline && (
+                        <div className="text-collapsed portofolio-text" style={{ marginBottom: 30 }}>
+                            Here are some of my recent projects ☁
+                        </div>
+                    )}
                 </div>
             </Animate>
 
@@ -38,189 +38,95 @@ function Portofolio()
                     <section className="containers">
                         <div className="portofolio-container-diff">
                             <div className="huge-row">
-                                <div className="portofolio-item item"
-                                    onClick={() => visit("https://murmuring-wave-59408.herokuapp.com/")}
-                                >
-                                    <div className="item-title-dark">
-                                        Ctice 📚
-                                    </div>
-                                    <div className={Stack ? "item-repo" : "item-repo item-repo-anim"}>
-                                        <div className="item-repo-dark">repository</div>
-                                        <a
-                                            alt="ctice-repo"
-                                            href="https://github.com/hrwire127/ctice"
-                                            className='item-link'
-                                        >
-                                            https://github.com/hrwire127/ctice
-                                        </a>
-                                    </div>
-                                </div>
+                                <PortofolioItem
+                                    link="https://murmuring-wave-59408.herokuapp.com/"
+                                    name="Ctice 📚"
+                                    repo="https://github.com/hrwire127/ctice"
+                                    img="ctice"
+                                    setLoading={setLoading}
+                                    aspect
+                                />
                             </div>
                             <div className="small-row">
-                                <div className="portofolio-item item-sm"
-                                    onClick={() => visit("https://yahtzee39.herokuapp.com/")}
-                                >
-                                    <div className="item-title-dark">
-                                        Yahtzee 🎲
-                                    </div>
-                                    <div className={Stack ? "item-repo" : "item-repo item-repo-anim"}>
-                                        <div className="item-repo-dark">repository</div>
-                                        <a
-                                            alt="ctice-repo"
-                                            href="https://github.com/hrwire127/yahtzee"
-                                            className='item-link'
-                                        >
-                                            https://github.com/hrwire127/yahtzee
-                                        </a>
-                                    </div>
-                                </div>
-                                <div className="portofolio-item item-sm"
-                                    onClick={() => visit("https://glacial-waters-83977.herokuapp.com/")}
-                                >
-                                    <div className="item-title-dark">
-                                        Opal 🔷
-                                    </div>
-                                    <div className={Stack ? "item-repo" : "item-repo item-repo-anim"}>
-                                        <div className="item-repo-dark">repository</div>
-                                        <a
-                                            alt="ctice-repo"
-                                            href="https://github.com/hrwire127/Opal"
-                                            className='item-link'
-                                        >
-                                            https://github.com/hrwire127/Opal
-                                        </a>
-                                    </div>
-                                </div>
+                                <PortofolioItem
+                                    link="https://yahtzee39.herokuapp.com/"
+                                    name="Yahtzee 🎲"
+                                    repo="https://github.com/hrwire127/yahtzee"
+                                    img="yahtzee"
+                                    setLoading={setLoading}
+                                />
+                                <PortofolioItem
+                                    link="https://glacial-waters-83977.herokuapp.com/"
+                                    name="Opal ♦"
+                                    repo="https://github.com/hrwire127/Opal"
+                                    img="opal"
+                                    setLoading={setLoading}
+                                />
                             </div>
                         </div>
                         <div className="portofolio-container-diff">
                             <div className="small-row">
-                                <div className="portofolio-item item-sm"
-                                    onClick={() => visit("https://todo-list39.herokuapp.com/")}
-                                >
-                                    <div className="item-title-dark">
-                                        Todo List 🔖
-                                    </div>
-                                    <div className={Stack ? "item-repo" : "item-repo item-repo-anim"}>
-                                        <div className="item-repo-dark">repository</div>
-                                        <a
-                                            alt="ctice-repo"
-                                            href="https://github.com/hrwire127/todo-list"
-                                            className='item-link'
-                                        >
-                                            https://github.com/hrwire127/todo-list
-                                        </a>
-                                    </div>
-                                </div>
-                                <div className="portofolio-item item-sm"
-                                    onClick={() => visit("https://dad-jokes31.herokuapp.com/")}
-                                >
-                                    <div className="item-title-dark">
-                                        Dad Jokes 🤣
-                                    </div>
-                                    <div className={Stack ? "item-repo" : "item-repo item-repo-anim"}>
-                                        <div className="item-repo-dark">repository</div>
-                                        <a
-                                            alt="ctice-repo"
-                                            href="https://github.com/hrwire127/dad-jokes"
-                                            className='item-link'
-                                        >
-                                            https://github.com/hrwire127/dad-jokes
-                                        </a>
-                                    </div>
-                                </div>
+                                <PortofolioItem
+                                    link="https://todo-list39.herokuapp.com/"
+                                    name="Todo List 🔖"
+                                    repo="https://github.com/hrwire127/todo-list"
+                                    img="todolist"
+                                    setLoading={setLoading}
+                                />
+                                <PortofolioItem
+                                    link="https://dad-jokes31.herokuapp.com/"
+                                    name="Dad Jokes 🤣"
+                                    repo="https://github.com/hrwire127/dad-jokes"
+                                    img="dadjokes"
+                                    setLoading={setLoading}
+                                />
                             </div>
                             <div className="huge-row">
-                                <div className="portofolio-item item"
-                                    onClick={() => visit("https://color-palette-998d.herokuapp.com/")}
-                                >
-                                    <div className="item-title-dark">
-                                        Palette Generator 🎨
-                                    </div>
-                                    <div className={Stack ? "item-repo" : "item-repo item-repo-anim"}>
-                                        <div className="item-repo-dark">repository</div>
-                                        <a
-                                            alt="ctice-repo"
-                                            href="https://github.com/hrwire127/color-palette"
-                                            className='item-link'
-                                        >
-                                            https://github.com/hrwire127/color-palette
-                                        </a>
-                                    </div>
-                                </div>
+                                <PortofolioItem
+                                    link="https://color-palette-998d.herokuapp.com/"
+                                    name="Palette Generator 🎨"
+                                    repo="https://github.com/hrwire127/color-palette"
+                                    img="palettegenerator"
+                                    setLoading={setLoading}
+                                    aspect
+                                />
                             </div>
                         </div>
                         <div className="portofolio-container-normal">
-                            <div className="portofolio-item item-normal"
-                                onClick={() => visit("https://lights-out39.herokuapp.com/")}
-                            >
-                                <div className="item-title-dark">
-                                    Light's Out 💡
-                                </div>
-                                <div className={Stack ? "item-repo" : "item-repo item-repo-anim"}>
-                                    <div className="item-repo-dark">repository</div>
-                                    <a
-                                        alt="ctice-repo"
-                                        href="https://github.com/hrwire127/lights-out"
-                                        className='item-link'
-                                    >
-                                        https://github.com/hrwire127/lights-out
-                                    </a>
-                                </div>
-                            </div>
-                            <div className="portofolio-item item-normal"
-                                onClick={() => visit("https://hangman39.herokuapp.com/")}
-                            >
-                                <div className="item-title-dark">
-                                    Hangman🧵
-                                </div>
-                                <div className={Stack ? "item-repo" : "item-repo item-repo-anim"}>
-                                    <div className="item-repo-dark">repository</div>
-                                    <a
-                                        alt="ctice-repo"
-                                        href="https://github.com/hrwire127/hangman"
-                                        className='item-link'
-                                    >
-                                        https://github.com/hrwire127/hangman
-                                    </a>
-                                </div>
-                            </div>
-                            <div className="portofolio-item item-normal"
-                                onClick={() => visit("https://todo-hooks39.herokuapp.com/")}
-                            >
-                                <div className="item-title-dark">
-                                    Todo 2 📑
-                                </div>
-                                <div className={Stack ? "item-repo" : "item-repo item-repo-anim"}>
-                                    <div className="item-repo-dark">repository</div>
-                                    <a
-                                        alt="ctice-repo"
-                                        href="https://github.com/hrwire127/todo-hooks"
-                                        className='item-link'
-                                    >
-                                        https://github.com/hrwire127/todo-hooks
-                                    </a>
-                                </div>
-                            </div>
+                            <PortofolioItem
+                                link="https://lights-out39.herokuapp.com/"
+                                name="Light's Out 💡"
+                                repo="https://github.com/hrwire127/lights-out"
+                                img="lightsout"
+                                setLoading={setLoading}
+                                normal
+                            />
+                            <PortofolioItem
+                                link="https://hangman39.herokuapp.com/"
+                                name="Hangman🧵"
+                                repo="https://github.com/hrwire127/hangman"
+                                img="hangman"
+                                setLoading={setLoading}
+                                normal
+                            />
+                            <PortofolioItem
+                                link="https://todo-hooks39.herokuapp.com/"
+                                name="Todo 2 📑"
+                                repo="https://github.com/hrwire127/todo-hooks"
+                                img="todolist2"
+                                setLoading={setLoading}
+                                normal
+                            />
                         </div>
                         <div className="portofolio-container-normal">
-                            <div className="portofolio-item item-normal"
-                                onClick={() => visit("https://deck-cards39.herokuapp.com/")}
-                            >
-                                <div className="item-title-dark">
-                                    Cards Deck 🃏
-                                </div>
-                                <div className={Stack ? "item-repo" : "item-repo item-repo-anim"}>
-                                    <div className="item-repo-dark">repository</div>
-                                    <a
-                                        alt="ctice-repo"
-                                        href="https://github.com/hrwire127/deck-cards"
-                                        className='item-link'
-                                    >
-                                        https://github.com/hrwire127/deck-cards
-                                    </a>
-                                </div>
-                            </div>
+                            <PortofolioItem
+                                link="https://deck-cards39.herokuapp.com/"
+                                name="Cards Deck 🃏"
+                                repo="https://github.com/hrwire127/deck-cards"
+                                img="deckcard"
+                                setLoading={setLoading}
+                                normal
+                            />
                             <div className="item-normal" />
                             <div className="item-normal" />
                         </div>
@@ -228,176 +134,62 @@ function Portofolio()
                 </Animate>)
                 : (<Animate animation="step-anim" start>
                     <section className="containers">
-                        <div className="portofolio-item item"
-                            onClick={() => visit("https://murmuring-wave-59408.herokuapp.com/")}
-                        >
-                            <div className="item-title-dark">
-                                Ctice 📚
-                            </div>
-                            <div className="item-repo">
-                                <div className="item-repo-dark">repository</div>
-                                <a
-                                    alt="ctice-repo"
-                                    href="https://github.com/hrwire127/ctice"
-                                    className='item-link'
-                                >
-                                    https://github.com/hrwire127/ctice
-                                </a>
-                            </div>
-                        </div>
-                        <div className="portofolio-item item"
-                            onClick={() => visit("https://yahtzee39.herokuapp.com/")}
-                        >
-                            <div className="item-title-dark">
-                                Yahtzee 🎲
-                            </div>
-                            <div className="item-repo">
-                                <div className="item-repo-dark">repository</div>
-                                <a
-                                    alt="ctice-repo"
-                                    href="https://github.com/hrwire127/yahtzee"
-                                    className='item-link'
-                                >
-                                    https://github.com/hrwire127/yahtzee
-                                </a>
-                            </div>
-                        </div>
-                        <div className="portofolio-item item"
-                            onClick={() => visit("https://glacial-waters-83977.herokuapp.com/")}
-                        >
-                            <div className="item-title-dark">
-                                Opal 🔷
-                            </div>
-                            <div className="item-repo">
-                                <div className="item-repo-dark">repository</div>
-                                <a
-                                    alt="ctice-repo"
-                                    href="https://github.com/hrwire127/Opal"
-                                    className='item-link'
-                                >
-                                    https://github.com/hrwire127/Opal
-                                </a>
-                            </div>
-                        </div>
-                        <div className="portofolio-item item"
-                            onClick={() => visit("https://todo-list39.herokuapp.com/")}
-                        >
-                            <div className="item-title-dark">
-                                Todo List 🔖
-                            </div>
-                            <div className="item-repo">
-                                <div className="item-repo-dark">repository</div>
-                                <a
-                                    alt="ctice-repo"
-                                    href="https://github.com/hrwire127/todo-list"
-                                    className='item-link'
-                                >
-                                    https://github.com/hrwire127/todo-list
-                                </a>
-                            </div>
-                        </div>
-                        <div className="portofolio-item item"
-                            onClick={() => visit("https://dad-jokes31.herokuapp.com/")}
-                        >
-                            <div className="item-title-dark">
-                                Dad Jokes 🤣
-                            </div>
-                            <div className="item-repo">
-                                <div className="item-repo-dark">repository</div>
-                                <a
-                                    alt="ctice-repo"
-                                    href="https://github.com/hrwire127/dad-jokes"
-                                    className='item-link'
-                                >
-                                    https://github.com/hrwire127/dad-jokes
-                                </a>
-                            </div>
-                        </div>
-                        <div className="portofolio-item item"
-                            onClick={() => visit("https://color-palette-998d.herokuapp.com/")}
-                        >
-                            <div className="item-title-dark">
-                                Palette Generator 🎨
-                            </div>
-                            <div className="item-repo">
-                                <div className="item-repo-dark">repository</div>
-                                <a
-                                    alt="ctice-repo"
-                                    href="https://github.com/hrwire127/color-palette"
-                                    className='item-link'
-                                >
-                                    https://github.com/hrwire127/color-palette
-                                </a>
-                            </div>
-                        </div>
-                        <div className="portofolio-item item"
-                            onClick={() => visit("https://lights-out39.herokuapp.com/")}
-                        >
-                            <div className="item-title-dark">
-                                Light's Out 💡
-                            </div>
-                            <div className="item-repo">
-                                <div className="item-repo-dark">repository</div>
-                                <a
-                                    alt="ctice-repo"
-                                    href="https://github.com/hrwire127/lights-out"
-                                    className='item-link'
-                                >
-                                    https://github.com/hrwire127/lights-out
-                                </a>
-                            </div>
-                        </div>
-                        <div className="portofolio-item item"
-                            onClick={() => visit("https://hangman39.herokuapp.com/")}
-                        >
-                            <div className="item-title-dark">
-                                Hangman🧵
-                            </div>
-                            <div className="item-repo">
-                                <div className="item-repo-dark">repository</div>
-                                <a
-                                    alt="ctice-repo"
-                                    href="https://github.com/hrwire127/hangman"
-                                    className='item-link'
-                                >
-                                    https://github.com/hrwire127/hangman
-                                </a>
-                            </div>
-                        </div>
-                        <div className="portofolio-item item"
-                            onClick={() => visit("https://todo-hooks39.herokuapp.com/")}
-                        >
-                            <div className="item-title-dark">
-                                Todo 2 📑
-                            </div>
-                            <div className="item-repo">
-                                <div className="item-repo-dark">repository</div>
-                                <a
-                                    alt="ctice-repo"
-                                    href="https://github.com/hrwire127/todo-hooks"
-                                    className='item-link'
-                                >
-                                    https://github.com/hrwire127/todo-hooks
-                                </a>
-                            </div>
-                        </div>
-                        <div className="portofolio-item item"
-                            onClick={() => visit("https://deck-cards39.herokuapp.com/")}
-                        >
-                            <div className="item-title-dark">
-                                Cards Deck 🃏
-                            </div>
-                            <div className="item-repo">
-                                <div className="item-repo-dark">repository</div>
-                                <a
-                                    alt="ctice-repo"
-                                    href="https://github.com/hrwire127/deck-cards"
-                                    className='item-link'
-                                >
-                                    https://github.com/hrwire127/deck-cards
-                                </a>
-                            </div>
-                        </div>
+                        <PortofolioItem
+                            link="https://murmuring-wave-59408.herokuapp.com/"
+                            name="Ctice 📚"
+                            repo="https://github.com/hrwire127/ctice"
+                            img="ctice"
+                            setLoading={setLoading}
+                        />
+                        <PortofolioItem
+                            link="https://yahtzee39.herokuapp.com/"
+                            name="Yahtzee 🎲"
+                            repo="https://github.com/hrwire127/yahtzee"
+                            img="yahtzee"
+                            setLoading={setLoading}
+                        />
+                        <PortofolioItem
+                            link="https://glacial-waters-83977.herokuapp.com/"
+                            name="Opal ♦"
+                            repo="https://github.com/hrwire127/Opal"
+                            img="opal"
+                            setLoading={setLoading}
+                        />
+                        <PortofolioItem
+                            link="https://color-palette-998d.herokuapp.com/"
+                            name="Palette Generator 🎨"
+                            repo="https://github.com/hrwire127/color-palette"
+                            img="palettegenerator"
+                            setLoading={setLoading}
+                        />
+                        <PortofolioItem
+                            link="https://lights-out39.herokuapp.com/"
+                            name="Light's Out 💡"
+                            repo="https://github.com/hrwire127/lights-out"
+                            img="lightsout"
+                            setLoading={setLoading}
+                        />
+                        <PortofolioItem
+                            link="https://hangman39.herokuapp.com/"
+                            name="Hangman🧵"
+                            repo="https://github.com/hrwire127/hangman"
+                            img="hangman"
+                            setLoading={setLoading}
+                        />
+                        <PortofolioItem
+                            link="https://todo-hooks39.herokuapp.com/"
+                            name="Todo 2 📑"
+                            repo="https://github.com/hrwire127/todo-hooks"
+                            img="todolist2"
+                            setLoading={setLoading}
+                        />
+                        <PortofolioItem
+                            link="https://deck-cards39.herokuapp.com/"
+                            name="Cards Deck 🃏"
+                            repo="https://github.com/hrwire127/deck-cards"
+                            img="deckcard"
+                            setLoading={setLoading}
+                        />
                     </section>
                 </Animate>)
             }
