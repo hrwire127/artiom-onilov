@@ -29,9 +29,9 @@ function About()
                         </div>
                     </div>
                 </div>
-                {!Stack && (<Animate animation="opacity-anim">
-                    <img src="/images/github.png" alt="profile-intro-img" className="profile" />
-                </Animate>)}
+            </Animate>
+            <Animate animation="step-anim" start>
+                {!Stack && (<img src="/images/github.png" alt="profile-intro-img" className="profile" />)}
             </Animate>
         </section>)
 
@@ -41,7 +41,9 @@ function About()
             style={{ width: "100%", width: "fit-content" }}
         >
             <Animate animation="step-anim" start>
-                <div className="headline-sm">Relevant Skills</div>
+                <div className="headline-sm">Skills</div>
+            </Animate>
+            <Animate animation="step-anim" start>
                 <div className="skill-row" >
                     <div className="skill-container">
                         <img
@@ -64,13 +66,6 @@ function About()
                             alt="js-skill"
                         />
                     </div>
-                    {/* <div className="skill-container">
-                        <img
-                            className="skill-img"
-                            src="/images/skills/csharp.png"
-                            alt="csharp-skill"
-                        />
-                    </div> */}
                     <a className="skill-container" href="https://www.mongodb.com/">
                         <img
                             className="skill-img"
@@ -86,6 +81,8 @@ function About()
                         />
                     </a>
                 </div>
+            </Animate>
+            <Animate animation="step-anim" start>
                 <div className="skill-row">
                     <a className="skill-container" href="https://reactjs.org/">
                         <img
@@ -124,6 +121,8 @@ function About()
                         />
                     </a>
                 </div>
+            </Animate>
+            <Animate animation="step-anim" start>
                 <div className="skill-row">
                     <a className="skill-container" href="https://www.adobe.com/products/photoshop.html">
                         <img
@@ -152,27 +151,26 @@ function About()
             }}
         >
             <div className="margin-total 
-        padding-total 
-        padding-total-intro 
-        rounded-layout 
-        full-container"
+                    padding-total 
+                    padding-total-intro 
+                    rounded-layout 
+                    full-container"
                 style={{
                     backgroundColor: "#f2f2f2"
                 }}
             >
                 {!Stack || Small
                     ? (
-                        <div style={{ width: "100%" }} className="center-container">
+                        <div style={{ width: "100%" }} className={Small ? "center-container" : "left-container"}>
                             <AboutContainer />
                             <SkillContainer />
                         </div>)
-                    : (
-                        <>
-                            <div style={{ width: "100%" }} className="center-container">
-                                <AboutContainer />
-                            </div>
-                            <SkillContainer />
-                        </>)}
+                    : (<>
+                        <div style={{ width: "100%" }} className="">
+                            <AboutContainer />
+                        </div>
+                        <SkillContainer />
+                    </>)}
             </div>
         </div>
     )
