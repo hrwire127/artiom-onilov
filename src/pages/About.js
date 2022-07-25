@@ -11,35 +11,34 @@ function About()
     const AboutContainer = () => (
         <section className={!Stack ? "container" : ""} style={Stack ? { width: "fit-content" } : {}}>
             <div className="paragraph" >
-                <div className="headline">About Me 👋</div>
-                <div className=" ">
-                    <section className="text info-text text-about" style={{}}>
+                <div className="headline-sm">About Me 👋</div>
+                <div className="text-container">
+                    <div className="text-collapsed text-about">
                         <div>I am a web developer based in Moldova.</div>
-                        <div>Throughout my journey 🗺️, I have worked for</div>
-                        <div>some customers localy 🏠, in multiple fields.</div>
-                    </section>
-                    <section className="text info-text text-about" style={{ marginTop: "20px" }}>
-                        <div>I like to serve people 💖 and help out my</div>
-                        <div>customers as much as possible 🌟.</div>
-                    </section>
-                    <section className="text info-text text-about" style={{ marginTop: "20px" }}>
-                        <div>I do care about the people who I work with and </div>
-                        <div>look further into contributing to this world 🌎.</div>
-                    </section>
+                        <div>Throughout my journey, I have worked for</div>
+                        <div>some customers localy, in multiple fields.</div>
+                    </div>
+                    <div className="text-collapsed text-about" style={{ marginTop: 40 }}>
+                        <div>I like to serve people and help out my</div>
+                        <div>customers as much as possible.</div>
+                    </div>
+                    <div className="text-collapsed text-about" style={{ marginTop: 40 }}>
+                        <div>I do care about the my clients and look</div>
+                        <div>further into contributing to this world.</div>
+                    </div>
                 </div>
             </div>
             {!Stack && (<Animate animation="opacity-anim">
-                <div className="profile shadow" />
+                <img src="/images/github.png" alt="profile-intro-img" className="profile" />
             </Animate>)}
         </section>)
 
     const SkillContainer = () => (
         <section
-            className="margin-total-sm"
+            className="margin-total-sm margin-total-about"
             style={{ width: "100%", width: "fit-content" }}
         >
-            <div className="headline">Relevant Skills</div>
-            <div className="sub-headline">highly mastered and heavly used</div>
+            <div className="headline-sm">Relevant Skills</div>
             <div className="skill-row" >
                 <div className="skill-container">
                     <img
@@ -101,6 +100,7 @@ function About()
                 </a>
                 <a className="skill-container" href="https://expressjs.com/">
                     <img
+                        style={{ height: 23 }}
                         className="skill-img"
                         src="/images/skills/express.png"
                         alt="express-skill"
@@ -116,7 +116,7 @@ function About()
                 <a className="skill-container" href="https://github.com/">
                     <img
                         className="skill-img"
-                        src="/images/skills/github.png"
+                        src="/images/github.png"
                         alt="github-skill"
                     />
                 </a>
@@ -140,19 +140,28 @@ function About()
         </section>
     )
 
-    return (<div className="full-container">
-        {!Stack || Small
-            ? (<div className="center-container">
-                <AboutContainer />
-                <SkillContainer />
-            </div>)
-            : (<>
-                <div className="center-container">
+    return (<div style={{ backgroundColor: "#1A2C5B" }}>
+        <div className="margin-total 
+        padding-total 
+        padding-total-intro 
+        rounded-layout 
+        full-container"
+            style={{
+                backgroundColor: "#f2f2f2"
+            }}>
+            {!Stack || Small
+                ? (<div className="center-container">
                     <AboutContainer />
-                </div>
-                <SkillContainer />
-            </>)}
+                    <SkillContainer />
+                </div>)
+                : (<>
+                    <div className="center-container">
+                        <AboutContainer />
+                    </div>
+                    <SkillContainer />
+                </>)}
 
+        </div>
     </div>
     )
 }

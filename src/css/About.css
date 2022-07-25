@@ -30,7 +30,6 @@
 .full-container {
   display: flex;
   justify-content: center;
-  margin-top: 60px;
 }
 
 .center-container {
@@ -53,6 +52,19 @@
   .info-text {
     font-size: 1.5rem;
   }
+  .content {
+    background-color: #1a2c5b;
+  }
+}
+
+@media (max-width: 881px) {
+  .margin-total-about {
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+  .text-about {
+    font-size: 1.1rem;
+  }
 }
 
 @media (max-width: 664px) {
@@ -64,7 +76,7 @@
     padding-right: 20px;
   }
   .text-about {
-    text-align: left!important;
+    text-align: left !important;
   }
 }
 
@@ -77,9 +89,14 @@
   }
 }
 
+@media (max-width: 380px) {
+  .text-about {
+    font-size: 1rem;
+  }
+}
+
 @media (max-width: 360px) {
   .info-text {
     font-size: 0.85rem;
   }
 }
-
