@@ -150,16 +150,24 @@ function About()
                 backgroundColor: "#f2f2f2"
             }}>
             {!Stack || Small
-                ? (<div className="center-container">
-                    <AboutContainer />
-                    <SkillContainer />
-                </div>)
-                : (<>
-                    <div className="center-container">
-                        <AboutContainer />
-                    </div>
-                    <SkillContainer />
-                </>)}
+                ? (
+                    <div style={{ width: "100%" }} className="center-container">
+                        <Animate animation="step-anim" start>
+                            <AboutContainer />
+                            <SkillContainer />
+                        </Animate>
+                    </div>)
+                : (
+                    <>
+                        <div style={{ width: "100%" }} className="center-container">
+                            <Animate animation="step-anim" start>
+                                <AboutContainer />
+                            </Animate>
+                        </div>
+                        <Animate animation="step-anim" start>
+                            <SkillContainer />
+                        </Animate>
+                    </>)}
 
         </div>
     </div>

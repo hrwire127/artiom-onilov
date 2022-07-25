@@ -7,37 +7,35 @@ import useWindowSize from "../hooks/useWindowSize"
 
 function CallToAction()
 {
-    const [isPhoneSize] = useWindowSize(664, 0)
-
     return (
         <section className="margin-total padding-total"
             style={{
                 backgroundColor: "#1A2C5B",
             }}>
-            <Element name="test1" className="element">
-                <Animate animation="opacity-anim-slow">
+            <Animate animation="step-anim" start>
+                <Element name="test1" className="element">
                     <div
                         className="headline-center blue"
                         style={{ marginBottom: "30px", color: "#B8DFF0" }}
                     >
                         Get Your Website
                     </div>
-                </Animate>
-                <div className="text-container text-center">
-                    <div className="text-collapsed"
-                        style={{ color: "rgb(176 199 209)", fontSize: "1.5rem" }}
-                    >
-                        Place an order 🎁
+                    <div className="text-container text-center">
+                        <div className="text-collapsed"
+                            style={{ color: "rgb(176 199 209)", fontSize: "1.5rem" }}
+                        >
+                            Place an order 🎁
+                        </div>
                     </div>
-                </div>
-                <Form />
-                <div className="sub-headline text-center text-disabled"
-                    style={{ fontSize: "1.2rem", marginTop: "20px" }}
-                >
-                    contact@artiomonilov.com
-                </div>
+                    <Form />
+                    <div className="sub-headline text-center text-disabled"
+                        style={{ fontSize: "1.2rem", marginTop: "20px" }}
+                    >
+                        contact@artiomonilov.com
+                    </div>
 
-            </Element>
+                </Element>
+            </Animate>
         </section>
     )
 }

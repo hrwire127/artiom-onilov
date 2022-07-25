@@ -3,8 +3,9 @@ import { useInView } from "react-intersection-observer";
 
 function Animate(props)
 {
-    const { children, animation, style } = props;
+    const { children, animation, style, start } = props;
 
+    const [started, hasStarted] = useState(!start)
     const [trigger, setTrigger] = useState(false)
     const [ref, inView] = useInView()
 
@@ -13,6 +14,10 @@ function Animate(props)
         if (inView)
         {
             setTrigger(true)
+            setTimeout(() =>
+            {
+                hasStarted(true)
+            }, 400) //anim duration
         }
     }, [inView]);
 
@@ -20,10 +25,10 @@ function Animate(props)
         <div
             ref={ref}
             className={trigger ? animation : ""}
-            style={style}
+            style={!started ? { opacity: 0, ...style } : { opacity: 1, ...style }}
         >
             {children}
-        </div>
+        </div >
     )
 }
 
