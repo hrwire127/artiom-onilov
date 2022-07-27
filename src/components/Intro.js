@@ -74,7 +74,7 @@ function Intro()
             </Animate>
             <Animate animation="step-anim" start>
                 <div className="container-center">
-                    <div style={{ backgroundImage: 'url("/images/profile/intro.png")' }} alt="profile-intro-img" className="profile" />
+                    <div style={{ backgroundImage: 'url("/images/profile/intro.jpg")' }} alt="profile-intro-img" className="profile" />
                 </div>
             </Animate>
             <Animate animation="step-anim" start>
