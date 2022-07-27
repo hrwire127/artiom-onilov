@@ -2,13 +2,16 @@ import React, { useEffect, useState } from 'react'
 import { Link, Element } from 'react-scroll'
 import Animate from './Animate'
 import useWindowSize from "../hooks/useWindowSize"
+import useIsMounted from "../hooks/useIsMounted"
+import Spinner from "./Spinner"
 
 function Intro()
 {
+    const isMounted = useIsMounted()
+
     const [hightlight, setHighlight] = useState()
     const [contactText, setContactText] = useState("Contact Me")
     const [isPhoneSize] = useWindowSize(664, 0)
-
 
     return !isPhoneSize
         ? (<section
@@ -50,7 +53,14 @@ function Intro()
                 </div>
             </Animate>
             <Animate animation="step-anim" start>
-                <img src="/images/github.png" alt="profile-intro-img" className="profile" />
+                {isMounted
+                    ? (<div
+                        style={{ backgroundImage: 'url("/images/profile/intro.png")' }}
+                        alt="profile-intro-img"
+                        className="profile"
+                    />)
+                    : (<Spinner />)}
+
             </Animate>
         </section >)
         : (<section
@@ -64,7 +74,7 @@ function Intro()
             </Animate>
             <Animate animation="step-anim" start>
                 <div className="container-center">
-                    <img src="/images/github.png" alt="profile-intro-img" className="profile" />
+                    <div style={{ backgroundImage: 'url("/images/profile/intro.png")' }} alt="profile-intro-img" className="profile" />
                 </div>
             </Animate>
             <Animate animation="step-anim" start>

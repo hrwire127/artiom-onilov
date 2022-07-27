@@ -31,7 +31,11 @@ function About()
                 </div>
             </Animate>
             <Animate animation="step-anim" start>
-                {!Stack && (<img src="/images/github.png" alt="profile-intro-img" className="profile" />)}
+                {!Stack && (<div
+                    style={{ backgroundImage: 'url("/images/profile/about.png")' }}
+                    alt="profile-about-img"
+                    className="profile-about"
+                />)}
             </Animate>
         </section>)
 

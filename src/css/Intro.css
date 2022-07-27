@@ -1,7 +1,12 @@
 .profile {
   width: 450px;
+  height: 450px;
 
-  border-radius: 16px;
+  background-position: 0px -50px;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  border-radius: 360px;
 }
 
 .headline {
@@ -71,7 +76,7 @@
   .headline-sm {
     font-size: 2.6rem;
   }
-  
+
   .headline-xs {
     font-size: 0.8rem;
     font-weight: 700;
@@ -79,7 +84,7 @@
     margin-top: 10px;
     color: #1a2c5b;
   }
-  
+
   .text-collapsed {
     font-size: 1.4rem;
   }
@@ -173,8 +178,8 @@
   }
   .profile {
     margin: auto;
-    width: 80%;
-    height: 80%;
+    width: 80vw;
+    height: 80vw;
   }
   .paragraph {
     text-align: center;
