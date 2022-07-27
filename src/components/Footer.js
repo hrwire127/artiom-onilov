@@ -17,9 +17,15 @@ function Footer()
             </Animate>
             <Animate animation="step-anim" start>
                 <div className="footer-contacts">
-                    <div><img alt="facebook-contact" src="/images/facebook.png" className="footer-contact-img" /></div>
-                    <div><img alt="instagram-contact" src="/images/instagram.png" className="footer-contact-img" /></div>
-                    <div><img alt="github-contact" src="/images/github.png" className="footer-contact-img" style={{ width: "30px" }} /></div>
+                    <a href="https://www.linkedin.com/in/onilov-artiom-3a38a8246">
+                        <img alt="facebook-contact" src="/images/linkedin.png" className="footer-contact-img" />
+                    </a>
+                    <a href="https://twitter.com/artiom_o">
+                        <img alt="twitter-contact" src="/images/twitter.png" className="footer-contact-img" style={{ width: "30px" }} />
+                    </a>
+                    <a href="https://github.com/hrwire127">
+                        <img alt="github-contact" src="/images/github.png" className="footer-contact-img" style={{ width: "30px" }} />
+                    </a>
                 </div>
             </Animate>
         </footer >

@@ -31,7 +31,7 @@ function CallToAction()
                     <div className="sub-headline text-center text-disabled"
                         style={{ fontSize: "1.2rem", marginTop: "20px" }}
                     >
-                        contact@artiomonilov.com
+                        artiomonilov2005@gmail.com
                     </div>
 
                 </Element>
