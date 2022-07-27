@@ -55,7 +55,7 @@ function Intro()
             <Animate animation="step-anim" start>
                 {isMounted
                     ? (<div
-                        style={{ backgroundImage: 'url("/images/profile/intro.png")' }}
+                        style={{ backgroundImage: 'url("/images/profile/intro.jpg")' }}
                         alt="profile-intro-img"
                         className="profile"
                     />)
