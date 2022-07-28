@@ -27,7 +27,7 @@ function Intro()
                             All your web experiences in one place.
                         </div>
                         <div className="text-collapsed ">
-                            Your favorite Web Developer ❤
+                            Your favorite Web Developer 🤍
                         </div>
                         {/* Freelancer, Engineer ... , move left slash (fade)*/}
                     </div>
@@ -86,7 +86,7 @@ function Intro()
                             All your web experiences in one place.
                         </div>
                         <div className="text-collapsed ">
-                            Your favorite Web Developer ❤
+                            Your favorite Web Developer 🤍
                         </div>
                         {/* Freelancer, Engineer ... , move left slash (fade)*/}
                     </div>
