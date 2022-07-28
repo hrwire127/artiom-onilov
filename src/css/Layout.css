@@ -105,17 +105,21 @@
 
 .btn-disabled {
   border: none;
+  text-decoration: none;
 
   /* width: 200px; */
-  padding-left: 20px;
-  padding-right: 20px;
-  height: 50px;
-  background-color: #c5c5c5c9;
+  padding: 15px;
+  padding-left: 25px;
+  padding-right: 25px;
+  height: 60px;
+  background-color: #abbcc4;
   color: white;
   border-radius: 8px;
 
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   font-weight: 600;
+
+  pointer-events: none;
 }
 
 ::-webkit-scrollbar {

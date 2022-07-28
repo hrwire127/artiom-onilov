@@ -2,6 +2,7 @@ import React, { useState, useReducer } from 'react'
 import fieldReducer from '../reducers/fieldReducer'
 import { send } from 'emailjs-com';
 import Alert from './Alert';
+import Spinner from './Spinner'
 
 function Form()
 {
@@ -95,10 +96,10 @@ function Form()
         if (body)
         {
             send(
-                'service_tbtgahs', //
-                'template_fdgkcoa', //
+                'service_hkj1cy1', //
+                'template_v8k9np4', //
                 body,
-                'nfP3UlEICRSCMNZXe' //
+                'Xz2enPPrP-8q33kHq' //
             )
                 .then((response) =>
                 {
@@ -134,6 +135,33 @@ function Form()
             type: "TOGGLE"
         })
     };
+
+    const NormalBtn = () => (
+        <button className="action-btn-m">
+            <span>Send ✉</span>
+        </button>)
+
+    const DisabledBtn = () => (
+        <button disabled
+            className="action-btn-m btn-disabled"
+            style={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "flex-end",
+                gap: 4
+            }}>
+            <span style={{}}>Send</span>
+            <div
+                className="loader"
+                style={{
+                    width: 15,
+                    height: 15,
+                    border: "4px solid #f3f3f3",
+                    borderTop: "4px solid #7971ea00",
+                }}
+            />
+        </button>
+    )
 
     return (
         <form onSubmit={onSubmit}>
@@ -177,9 +205,9 @@ function Form()
                 onChange={handleChange}
             />
             <div className="portofolio-btn-container">
-                <button className="action-btn-m">
-                    <span>Send ✉</span>
-                </button>
+                {!sending
+                    ? (<NormalBtn />)
+                    : (<DisabledBtn />)}
             </div>
         </form>
     )
