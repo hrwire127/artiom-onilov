@@ -17,7 +17,7 @@ function Footer()
             </Animate>
             <Animate animation="step-anim" start>
                 <div className="footer-contacts">
-                    <a href="https://www.linkedin.com/in/onilov-artiom-3a38a8246">
+                    <a href="https://www.linkedin.com/in/artiom-onilov-127bb6246">
                         <img alt="facebook-contact" src="/images/linkedin.png" className="footer-contact-img" />
                     </a>
                     <a href="https://twitter.com/artiom_o">
