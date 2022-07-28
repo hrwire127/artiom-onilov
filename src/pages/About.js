@@ -2,6 +2,7 @@ import React from 'react'
 import "../css/About.css"
 import Animate from '../components/Animate'
 import useWindowSize from "../hooks/useWindowSize"
+import Image from '../components/Image'
 
 function About()
 {
@@ -31,8 +32,9 @@ function About()
                 </div>
             </Animate>
             <Animate animation="step-anim" start>
-                {!Stack && (<div
-                    style={{ backgroundImage: 'url("/images/profile/about.png")' }}
+                {!Stack && (  
+                <Image
+                    src="/images/profile/about.png"
                     alt="profile-about-img"
                     className="profile-about"
                 />)}
@@ -42,7 +44,9 @@ function About()
     const SkillContainer = () => (
         <section
             className="margin-total-sm margin-total-about"
-            style={{ width: "100%", width: "fit-content" }}
+            style={{ //width: "100%",
+                width: "fit-content"
+            }}
         >
             <Animate animation="step-anim" start>
                 <div className="headline-sm">Skills</div>
@@ -120,7 +124,7 @@ function About()
                     <a className="skill-container" href="https://github.com/">
                         <img
                             className="skill-img"
-                            src="/images/github.png"
+                            src="/images/skills/github-dark.png"
                             alt="github-skill"
                         />
                     </a>

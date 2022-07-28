@@ -24,7 +24,7 @@ function Footer()
                         <img alt="twitter-contact" src="/images/twitter.png" className="footer-contact-img" style={{ width: "30px" }} />
                     </a>
                     <a href="https://github.com/hrwire127">
-                        <img alt="github-contact" src="/images/github.png" className="footer-contact-img" style={{ width: "30px" }} />
+                        <img alt="github-contact" src="/images/github-light.png" className="footer-contact-img" style={{ width: "30px" }} />
                     </a>
                 </div>
             </Animate>

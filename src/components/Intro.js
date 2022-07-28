@@ -4,11 +4,10 @@ import Animate from './Animate'
 import useWindowSize from "../hooks/useWindowSize"
 import useIsMounted from "../hooks/useIsMounted"
 import Spinner from "./Spinner"
+import Image from './Image'
 
 function Intro()
 {
-    const isMounted = useIsMounted()
-
     const [hightlight, setHighlight] = useState()
     const [contactText, setContactText] = useState("Contact Me")
     const [isPhoneSize] = useWindowSize(664, 0)
@@ -53,14 +52,12 @@ function Intro()
                 </div>
             </Animate>
             <Animate animation="step-anim" start>
-                {isMounted
-                    ? (<div
-                        style={{ backgroundImage: 'url("/images/profile/intro.jpg")' }}
-                        alt="profile-intro-img"
-                        className="profile"
-                    />)
-                    : (<Spinner />)}
-
+                <Image
+                    src="/images/profile/intro.jpg"
+                    alt="profile-intro-img"
+                    className="profile"
+                    placeholder={<Spinner />}
+                />
             </Animate>
         </section >)
         : (<section
@@ -74,7 +71,12 @@ function Intro()
             </Animate>
             <Animate animation="step-anim" start>
                 <div className="container-center">
-                    <div style={{ backgroundImage: 'url("/images/profile/intro.jpg")' }} alt="profile-intro-img" className="profile" />
+                    <Image
+                        src="/images/profile/intro.jpg"
+                        alt="profile-intro-img"
+                        className="profile"
+                        placeholder={<Spinner />}
+                    />
                 </div>
             </Animate>
             <Animate animation="step-anim" start>
