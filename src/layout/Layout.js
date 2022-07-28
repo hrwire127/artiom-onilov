@@ -7,7 +7,12 @@ import "../css/ScrollTop.css"
 
 function Layout(props)
 {
-    return (<main style={{ minHeight: "100vh", display: "flex", flexDirection: "column", justifyContent: "space-between" }}>
+    return (<main style={{
+        minHeight: "100vh",
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "space-between"
+    }}>
         <Header />
         {props.children}
         <Footer />
