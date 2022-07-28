@@ -94,6 +94,7 @@ function Portofolio()
                         </div>
                         <div className="portofolio-container-normal">
                             <PortofolioItem
+                                light
                                 link="https://lights-out39.herokuapp.com/"
                                 name="Light's Out 💡"
                                 repo="https://github.com/hrwire127/lights-out"
@@ -120,6 +121,7 @@ function Portofolio()
                         </div>
                         <div className="portofolio-container-normal">
                             <PortofolioItem
+                                light
                                 link="https://deck-cards39.herokuapp.com/"
                                 name="Cards Deck 🃏"
                                 repo="https://github.com/hrwire127/deck-cards"

@@ -3,7 +3,7 @@ import useWindowSize from "../hooks/useWindowSize"
 
 function PortofolioItem(props)
 {
-    const { link, name, repo, img, setLoading, normal, aspect } = props
+    const { link, name, repo, img, setLoading, normal, aspect, light } = props
     const [Stack] = useWindowSize(1000, 0)
 
     const visit = (url) =>
@@ -13,18 +13,34 @@ function PortofolioItem(props)
     }
 
     return (
-        <div className={`portofolio-item ${normal ? "item-normal" : "item"} ${aspect ? "item-aspect" : ""}`}
+        <div
+            className={`portofolio-item ${normal ? "item-normal" : "item"} ${aspect ? "item-aspect" : ""}`}
             onClick={() => visit(link)}
         >
-            <div className="item-title-dark">
+            <div className={light
+                ? "item-title-light"
+                : "item-title-dark"}
+            >
                 {name}
             </div>
-            <div className={Stack ? "item-repo item-no-anim" : "item-repo item-repo-anim"}>
-                <div className="item-repo-dark">repository</div>
+            <div className={Stack
+                ? "item-repo item-no-anim"
+                : "item-repo item-repo-anim"}
+            >
+                <div className={light
+                    ? "item-repo-light"
+                    : "item-repo-dark"}
+                >
+                    repository
+                </div>
                 <a
                     alt="ctice-repo"
                     href={repo}
-                    className='item-link'
+                    className={
+                        light
+                            ? "item-link-light"
+                            : "item-link-dark"
+                    }
                 >
                     {repo}
                 </a>
@@ -32,11 +48,6 @@ function PortofolioItem(props)
             <div
                 className='portofolio-img-overlay'
             />
-            {/* <img
-                src={`/images/portofolio/${img}.png`}
-                alt={`portofolio-${img}-img`}
-                className='portofolio-img'
-            /> */}
             <div
                 style={{
                     backgroundImage: `url("/images/portofolio/${img}.png")`,
