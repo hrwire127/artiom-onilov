@@ -139,13 +139,13 @@ function About()
                             alt="photoshop-skill"
                         />
                     </a>
-                    <a className="skill-container" href="https://www.blender.org/">
+                    {/* <a className="skill-container" href="https://www.blender.org/">
                         <img
                             className="skill-img"
                             src="/images/skills/blender.png"
                             alt="blender-skill"
                         />
-                    </a>
+                    </a> */}
                 </div>
             </Animate>
         </section>

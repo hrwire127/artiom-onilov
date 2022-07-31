@@ -265,8 +265,8 @@
 
 @media (max-width: 400px) {
   .padding-total {
-    padding-left: 7px!important;
-    padding-right: 7px!important;
+    padding-left: 7px !important;
+    padding-right: 7px !important;
   }
   a {
     font-size: 0.9rem;
@@ -370,14 +370,19 @@
 @keyframes step {
   0% {
     opacity: 0;
-    transform: translateY(20px)
+    transform: translateY(20px);
   }
   100% {
     opacity: 1;
-    transform: translateY(0)
+    transform: translateY(0);
   }
 }
 
 .step-anim {
   animation: step 0.4s ease-in-out;
+}
+
+.step-anim-delay {
+  animation: step 0.4s ease-in-out;
+  animation-delay: 0.2s;
 }

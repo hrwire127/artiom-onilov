@@ -8,8 +8,17 @@ import "../css/Portofolio.css"
 function Portofolio()
 {
     const [Stack] = useWindowSize(1000, 0)
-    const [loading, setLoading] = useState(false)
+    const [loading, changeLoading] = useState(false)
     const [NoSubheadline] = useWindowSize(883, 0)
+
+    const setLoading = (value) =>
+    {
+        changeLoading(value)
+        setTimeout(() =>
+        {
+            changeLoading(!value)
+        }, 15000) //
+    }
 
     return (<div style={{ backgroundColor: "#1A2C5B", flex: 1 }} className="content">
         <section

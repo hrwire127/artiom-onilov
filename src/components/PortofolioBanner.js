@@ -16,7 +16,7 @@ function PortofolioBanner()
                 backgroundColor: "#3E4E88",
             }}
         >
-            <Animate animation="step-anim" start>
+            <Animate animation="step-anim-delay" start>
                 <div className="portofolio-text-container">
                     <div className="headline-sm text-center"
                         style={{ color: "#B8DFF0" }}
@@ -29,7 +29,9 @@ function PortofolioBanner()
                         </div>
                     )}
                 </div>
+            </Animate>
 
+            <Animate animation="step-anim-delay" start>
                 {!isPhoneSize
                     ? (<>
                         <div className="portofolio-container">

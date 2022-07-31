@@ -15,7 +15,7 @@ function FullStack()
                     backgroundColor: "white",
                 }}
             >
-                <Animate animation="step-anim" start>
+                <Animate animation="step-anim-delay" start>
                     <div className="headline-sm text-center">All in one
                         {WrapTitle && (<br />)} Developer ♛</div>
                     <div className="text-container text-center">
@@ -26,7 +26,7 @@ function FullStack()
                     </div>
                 </Animate>
 
-                <Animate animation="step-anim" start>
+                <Animate animation="step-anim-delay" start>
                     <div className="container-fullstack">
                         <section className="full-stack-container">
                             <img className="fullstack-img"

@@ -12,7 +12,7 @@ function CallToAction()
             style={{
                 backgroundColor: "#1A2C5B",
             }}>
-            <Animate animation="step-anim" start>
+            <Animate animation="step-anim-delay" start>
                 <Element name="test1" className="element">
                     <div
                         className="headline-center blue"
