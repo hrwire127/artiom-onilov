@@ -39,7 +39,7 @@ function FullStack()
                     <div className="headline-sm text-center">{Headline_0}
                         {WrapTitle && (<br />)} {Headline_1}</div>
                     <div className="text-container text-center">
-                        <div className="text-collapsed">
+                        <div className="text-collapsed normal-subheadline">
                             {Subheadline_0} {isPhoneSize && (<br />)}
                             {Subheadline_1}
                         </div>

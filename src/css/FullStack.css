@@ -60,6 +60,9 @@
     gap: 40px;
     margin-bottom: 40px;
   }
+  .normal-subheadline {
+    font-size: 3vw!important;
+  }
 }
 
 @media (max-width: 491px) {

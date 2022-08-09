@@ -18,7 +18,7 @@ function WebsiteIdeea()
             <Animate animation="step-anim-delay" start>
                 <div className="headline-sm text-center">{Headline}</div>
                 <div className="text-container text-center">
-                    <div className="text-collapsed ">
+                    <div className="text-collapsed normal-subheadline">
                         {Subheadline_1} {isPhoneSize && (<br />)} {Subheadline_2}
                     </div>
                 </div>

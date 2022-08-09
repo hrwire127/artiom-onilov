@@ -69,9 +69,16 @@
 @media (max-width: 882px) {
   .headline-center,
   .text {
-    font-size: 2rem;
+    font-size: 2.5rem;
   }
   .headline {
     font-size: 1rem;
+  }
+}
+
+@media (max-width: 682px) {
+  .headline-center,
+  .text {
+    font-size: 2rem;
   }
 }

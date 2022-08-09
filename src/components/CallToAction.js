@@ -26,8 +26,8 @@ function CallToAction()
                         {Headline}
                     </div>
                     <div className="text-container text-center">
-                        <div className="text-collapsed"
-                            style={{ color: "rgb(176 199 209)", fontSize: "1.5rem" }}
+                        <div className="text-collapsed normal-subheadline"
+                            style={{ color: "rgb(176 199 209)" }}
                         >
                             {Subheadline}
                         </div>
