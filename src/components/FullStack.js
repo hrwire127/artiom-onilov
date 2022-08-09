@@ -1,9 +1,29 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import Animate from './Animate'
+import { langCtx, Paragraphs } from '../context/langCtx'
 import useWindowSize from "../hooks/useWindowSize"
 
 function FullStack()
 {
+    const langValue = useContext(langCtx)
+
+    const Headline_0 = Paragraphs.Fullstack.part_0[langValue];
+    const Headline_1 = Paragraphs.Fullstack.part_1[langValue];
+    const Subheadline_0 = Paragraphs.Fullstack.part_2[langValue];
+    const Subheadline_1 = Paragraphs.Fullstack.part_3[langValue];
+    const Stack_0 = Paragraphs.Fullstack.part_4[langValue];
+    const Stack_1 = Paragraphs.Fullstack.part_5[langValue];
+    const Stack_2 = Paragraphs.Fullstack.part_6[langValue];
+    const Stack_3 = Paragraphs.Fullstack.part_7[langValue];
+    const Stack_4 = Paragraphs.Fullstack.part_8[langValue];
+    const Stack_5 = Paragraphs.Fullstack.part_9[langValue];
+    const Stack_6 = Paragraphs.Fullstack.part_10[langValue];
+    const Stack_7 = Paragraphs.Fullstack.part_11[langValue];
+    const Stack_8 = Paragraphs.Fullstack.part_12[langValue];
+    const Stack_9 = Paragraphs.Fullstack.part_13[langValue];
+    const Stack_10 = Paragraphs.Fullstack.part_14[langValue];
+    const Stack_11 = Paragraphs.Fullstack.part_15[langValue];
+
     const [isPhoneSize] = useWindowSize(664, 0)
     const [NoText] = useWindowSize(775, 0)
     const [WrapTitle] = useWindowSize(491, 0)
@@ -16,12 +36,12 @@ function FullStack()
                 }}
             >
                 <Animate animation="step-anim-delay" start>
-                    <div className="headline-sm text-center">All in one
-                        {WrapTitle && (<br />)} Developer ♛</div>
+                    <div className="headline-sm text-center">{Headline_0}
+                        {WrapTitle && (<br />)} {Headline_1}</div>
                     <div className="text-container text-center">
                         <div className="text-collapsed">
-                            The entire process goes {isPhoneSize && (<br />)}
-                            through my hands.
+                            {Subheadline_0} {isPhoneSize && (<br />)}
+                            {Subheadline_1}
                         </div>
                     </div>
                 </Animate>
@@ -33,11 +53,10 @@ function FullStack()
                                 src="/images/pages/fullstack/1.gif"
                                 alt="fullstack-1-img"
                             />
-                            <div className="headline-xs">UI Design</div>
+                            <div className="headline-xs">{Stack_0}</div>
                             {!NoText && (<div className="text-container">
                                 <div className="text-collapsed-xs">
-                                    The UI design sketch.
-                                    Layout, Style, Purpose.
+                                    {Stack_1}
                                 </div>
                             </div>)}
                         </section>
@@ -46,11 +65,10 @@ function FullStack()
                                 src="/images/pages/fullstack/2.gif"
                                 alt="fullstack-2-img"
                             />
-                            <div className="headline-xs">Icons and Assets</div>
+                            <div className="headline-xs">{Stack_2}</div>
                             {!NoText && (<div className="text-container">
                                 <div className="text-collapsed-xs">
-                                    Web assets and the entire brand.
-                                    Icons, images, fonts.
+                                    {Stack_3}
                                 </div>
                             </div>)}
                         </section>
@@ -59,10 +77,10 @@ function FullStack()
                                 src="/images/pages/fullstack/3.gif"
                                 alt="fullstack-3-img"
                             />
-                            <div className="headline-xs">Copywriting</div>
+                            <div className="headline-xs">{Stack_4}</div>
                             {!NoText && (<div className="text-container">
                                 <div className="text-collapsed-xs">
-                                    Written content that influences the vistior.
+                                    {Stack_5}
                                 </div>
                             </div>)}
                         </section>
@@ -71,11 +89,10 @@ function FullStack()
                                 src="/images/pages/fullstack/4.gif"
                                 alt="fullstack-4-img"
                             />
-                            <div className="headline-xs">Client Development</div>
+                            <div className="headline-xs">{Stack_6}</div>
                             {!NoText && (<div className="text-container">
                                 <div className="text-collapsed-xs">
-                                    Fully working client structure.
-                                    Used by the user.
+                                    {Stack_7}
                                 </div>
                             </div>)}
                         </section>
@@ -84,11 +101,10 @@ function FullStack()
                                 src="/images/pages/fullstack/5.gif"
                                 alt="fullstack-5-img"
                             />
-                            <div className="headline-xs">Server Development</div>
+                            <div className="headline-xs">{Stack_8}</div>
                             {!NoText && (<div className="text-container">
                                 <div className="text-collapsed-xs">
-                                    Fully working server logic.
-                                    Manages interaction.
+                                    {Stack_9}
                                 </div>
                             </div>)}
                         </section>
@@ -97,10 +113,10 @@ function FullStack()
                                 src="/images/pages/fullstack/6.gif"
                                 alt="fullstack-6-img"
                             />
-                            <div className="headline-xs">Security</div>
+                            <div className="headline-xs">{Stack_10}</div>
                             {!NoText && (<div className="text-container">
                                 <div className="text-collapsed-xs">
-                                    The base security to keep any application protected.
+                                    {Stack_11}
                                 </div>
                             </div>)}
                         </section>

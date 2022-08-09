@@ -1,16 +1,23 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useState } from 'react'
 import { Link, Element } from 'react-scroll'
 import Animate from './Animate'
 import useWindowSize from "../hooks/useWindowSize"
-import useIsMounted from "../hooks/useIsMounted"
+import { langCtx, Paragraphs } from '../context/langCtx'
 import Spinner from "./Spinner"
 import Image from './Image'
 
 function Intro()
 {
-    const [hightlight, setHighlight] = useState()
-    const [contactText, setContactText] = useState("Contact Me")
+    const langValue = useContext(langCtx)
+
+    const Headline = Paragraphs.Intro.part_0[langValue];
+    const ContactText = Paragraphs.Intro.part_3[langValue];
+    const Subheadline_1 = Paragraphs.Intro.part_1[langValue];
+    const Subheadline_2 = Paragraphs.Intro.part_2[langValue];
+
+    const [hoverText, setHoverText] = useState("")
     const [isPhoneSize] = useWindowSize(664, 0)
+
 
     return !isPhoneSize
         ? (<section
@@ -21,13 +28,13 @@ function Intro()
         >
             <Animate animation="step-anim" start>
                 <div className="paragraph">
-                    <div className="headline">Artiom Onilov</div>
+                    <div className="headline">{Headline}</div>
                     <div className="text-container">
                         <div className="text-collapsed ">
-                            All your web experiences in one place.
+                            {Subheadline_1}
                         </div>
                         <div className="text-collapsed ">
-                            Your favorite Web Developer ✨
+                            {Subheadline_2}
                         </div>
                         {/* Freelancer, Engineer ... , move left slash (fade)*/}
                     </div>
@@ -42,11 +49,11 @@ function Intro()
                         >
                             <button
                                 className="action-btn-m intro-btn"
-                                onMouseEnter={() => setContactText("Contact Me >")}
-                                onMouseLeave={() => setContactText("Contact Me")}
+                                onMouseEnter={() => setHoverText(">")}
+                                onMouseLeave={() => setHoverText()}
                             >
-                                <span>{contactText}</span>
-                            </button>
+                                <span>{ContactText} {hoverText || ""}</span>
+                            </button> 
                         </Link>
                     </div>
                 </div>
@@ -67,7 +74,7 @@ function Intro()
             }}
         >
             <Animate animation="step-anim" start>
-                <div className="headline">Artiom Onilov</div>
+                <div className="headline">{Headline}</div>
             </Animate>
             <Animate animation="step-anim" start>
                 <div className="container-center">
@@ -83,10 +90,10 @@ function Intro()
                 <div className="paragraph">
                     <div className="text-container">
                         <div className="text-collapsed ">
-                            All your web experiences in one place.
+                            {Subheadline_1}
                         </div>
                         <div className="text-collapsed ">
-                            Your favorite Web Developer ✨
+                            {Subheadline_2}
                         </div>
                         {/* Freelancer, Engineer ... , move left slash (fade)*/}
                     </div>
@@ -99,13 +106,13 @@ function Intro()
                             offset={50}
                             duration={500}
                         >
-                            <button
-                                className="action-btn-m intro-btn"
-                                onMouseEnter={() => setContactText("Contact Me >")}
-                                onMouseLeave={() => setContactText("Contact Me")}
-                            >
-                                <span>{contactText}</span>
-                            </button>
+                        <button
+                            className="action-btn-m intro-btn"
+                            onMouseEnter={() => setHoverText(">")}
+                            onMouseLeave={() => setHoverText()}
+                        >
+                            <span>{ContactText} {hoverText || ""}</span>
+                        </button> 
                         </Link>
                     </div>
                 </div>

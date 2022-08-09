@@ -1,14 +1,21 @@
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
 import Animate from './Animate'
 import { Link } from "react-router-dom"
 import useWindowSize from "../hooks/useWindowSize"
+import { langCtx, Paragraphs } from '../context/langCtx'
 import PortofolioItem from './PortofolioItem'
 
 function PortofolioBanner()
 {
+    const langValue = useContext(langCtx)
+
+    const Headline = Paragraphs.PortofolioBanner.part_0[langValue];
+    const Subheadline = Paragraphs.PortofolioBanner.part_1[langValue];
+    const BtnText = Paragraphs.PortofolioBanner.part_2[langValue];
+
     const [isPhoneSize] = useWindowSize(664, 0)
     const [NoSubheadline] = useWindowSize(883, 0)
-    const [contactText, setContactText] = useState("See All")
+    const [hoverText, setHoverText] = useState("")
 
     return (<div style={{ backgroundColor: "#1A2C5B" }}>
         <section className="margin-total padding-total  rounded-layout"
@@ -21,11 +28,11 @@ function PortofolioBanner()
                     <div className="headline-sm text-center"
                         style={{ color: "#B8DFF0" }}
                     >
-                        Latest Projects
+                        {Headline}
                     </div>
                     {!NoSubheadline && (
-                        <div className="text-collapsed portofolio-text">
-                            Here are some of my recent projects ☁
+                        <div className="portofolio-text">
+                            {Subheadline}
                         </div>
                     )}
                 </div>
@@ -117,10 +124,10 @@ function PortofolioBanner()
                     <div className="portofolio-btn-container">
                         <button
                             className="action-btn-m"
-                            onMouseEnter={() => setContactText("See All >")}
-                            onMouseLeave={() => setContactText("See All")}
+                            onMouseEnter={() => setHoverText(">")}
+                            onMouseLeave={() => setHoverText("")}
                         >
-                            <span>{contactText}</span>
+                            <span>{BtnText} {hoverText || ""}</span>
                         </button>
                     </div>
                 </Link>

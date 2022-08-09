@@ -1,11 +1,20 @@
-import React, { useState, useReducer } from 'react'
+import React, { useState, useReducer, useContext } from 'react'
 import fieldReducer from '../reducers/fieldReducer'
 import { send } from 'emailjs-com';
+import { langCtx, Paragraphs } from '../context/langCtx'
 import Alert from './Alert';
-import Spinner from './Spinner'
 
 function Form()
 {
+    const langValue = useContext(langCtx)
+
+    const YournameText = Paragraphs.Form.part_0[langValue];
+    const YouremailText = Paragraphs.Form.part_1[langValue];
+    const SubjectText = Paragraphs.Form.part_2[langValue];
+    const MessageText = Paragraphs.Form.part_3[langValue];
+    const ButtonActive = Paragraphs.Form.part_4[langValue];
+    const ButtonDisabled = Paragraphs.Form.part_5[langValue];
+
     const [toSend, dispatchSend] = useReducer(fieldReducer, {
         from_name: { value: '', helper: null },
         from_email: { value: '', helper: null },
@@ -138,7 +147,7 @@ function Form()
 
     const NormalBtn = () => (
         <button className="action-btn-m">
-            <span>Send ✉</span>
+            <span>{ButtonActive}</span>
         </button>)
 
     const DisabledBtn = () => (
@@ -150,7 +159,7 @@ function Form()
                 alignItems: "flex-end",
                 gap: 4
             }}>
-            <span style={{}}>Send</span>
+            <span style={{}}>{ButtonDisabled}</span>
             <div
                 className="loader"
                 style={{
@@ -168,7 +177,7 @@ function Form()
             <Alert message={alert ? alert.message : null} type={alert ? alert.type : null} />
             <div className="input-container">
                 <input
-                    placeholder='Your Name'
+                    placeholder={YournameText}
                     id="name"
                     name="from_name"
                     className=""
@@ -177,7 +186,7 @@ function Form()
                     onChange={handleChange}
                 />
                 <input
-                    placeholder='Your Email'
+                    placeholder={YouremailText}
                     id="email"
                     name='from_email'
                     className=""
@@ -187,7 +196,7 @@ function Form()
                 />
             </div>
             <input
-                placeholder='Subject'
+                placeholder={SubjectText}
                 id="subject"
                 name='subject'
                 className=""
@@ -196,7 +205,7 @@ function Form()
                 onChange={handleChange}
             />
             <textarea
-                placeholder='Message'
+                placeholder={MessageText}
                 id="message"
                 name="message"
                 className=""

@@ -1,12 +1,18 @@
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
 import Animate from '../components/Animate'
 import Spinner from '../components/Spinner';
 import useWindowSize from "../hooks/useWindowSize"
 import PortofolioItem from '../components/PortofolioItem'
+import { langCtx, Paragraphs } from '../context/langCtx'
 import "../css/Portofolio.css"
 
 function Portofolio()
 {
+    const langValue = useContext(langCtx)
+
+    const Headline = Paragraphs.Portofolio.part_0[langValue];
+    const Subheadline = Paragraphs.Portofolio.part_1[langValue];
+
     const [Stack] = useWindowSize(1000, 0)
     const [loading, changeLoading] = useState(false)
     const [NoSubheadline] = useWindowSize(883, 0)
@@ -32,11 +38,11 @@ function Portofolio()
                     <div
                         className="headline-sm text-center portofolio-headline"
                     >
-                        My Projects
+                        {Headline}
                     </div>
                     {!NoSubheadline && (
                         <div className="text-collapsed portofolio-text" style={{ marginBottom: 30 }}>
-                            Here are some of my recent projects ☁
+                            {Subheadline}
                         </div>
                     )}
                 </div>

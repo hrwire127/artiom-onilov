@@ -1,11 +1,24 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import "../css/About.css"
 import Animate from '../components/Animate'
 import useWindowSize from "../hooks/useWindowSize"
+import { langCtx, Paragraphs } from '../context/langCtx'
 import Image from '../components/Image'
 
 function About()
 {
+    const langValue = useContext(langCtx)
+
+    const Headline = Paragraphs.About.part_0[langValue];
+    const About_0 = Paragraphs.About.part_1[langValue];
+    const About_1 = Paragraphs.About.part_2[langValue];
+    const About_2 = Paragraphs.About.part_3[langValue];
+    const About_3 = Paragraphs.About.part_4[langValue];
+    const About_4 = Paragraphs.About.part_5[langValue];
+    const About_5 = Paragraphs.About.part_6[langValue];
+    const About_6 = Paragraphs.About.part_7[langValue];
+    const About_7 = Paragraphs.About.part_8[langValue];
+
     const [Stack] = useWindowSize(1230, 0)
     const [Small] = useWindowSize(881, 0)
 
@@ -13,31 +26,31 @@ function About()
         <section className={!Stack ? "container" : ""} style={Stack ? { width: "fit-content" } : {}}>
             <Animate animation="step-anim" start>
                 <div className="paragraph" >
-                    <div className="headline-sm">About Me 👋</div>
+                    <div className="headline-sm">{Headline}</div>
                     <div className="text-container">
                         <div className="text-collapsed text-about">
-                            <div>I am a web developer based in Moldova.</div>
-                            <div>Throughout my journey, I have worked for</div>
-                            <div>some customers localy, in multiple fields.</div>
+                            <div>{About_0}</div>
+                            <div>{About_1}</div>
+                            <div>{About_2}</div>
                         </div>
                         <div className="text-collapsed text-about" style={{ marginTop: 40 }}>
-                            <div>I like to serve people and help out my</div>
-                            <div>customers as much as possible.</div>
+                            <div>{About_3}</div>
+                            <div>{About_4}</div>
                         </div>
                         <div className="text-collapsed text-about" style={{ marginTop: 40 }}>
-                            <div>I do care about the my clients and look</div>
-                            <div>further into contributing to this world.</div>
+                            <div>{About_5}</div>
+                            <div>{About_6}</div>
                         </div>
                     </div>
                 </div>
             </Animate>
             <Animate animation="step-anim" start>
-                {!Stack && (  
-                <Image
-                    src="/images/profile/about.png"
-                    alt="profile-about-img"
-                    className="profile-about"
-                />)}
+                {!Stack && (
+                    <Image
+                        src="/images/profile/about.png"
+                        alt="profile-about-img"
+                        className="profile-about"
+                    />)}
             </Animate>
         </section>)
 
@@ -49,7 +62,7 @@ function About()
             }}
         >
             <Animate animation="step-anim" start>
-                <div className="headline-sm">Skills</div>
+                <div className="headline-sm">{About_7}</div>
             </Animate>
             <Animate animation="step-anim" start>
                 <div className="skill-row" >
@@ -146,13 +159,6 @@ function About()
                             alt="photoshop-skill"
                         />
                     </a>
-                    {/* <a className="skill-container" href="https://www.blender.org/">
-                        <img
-                            className="skill-img"
-                            src="/images/skills/blender.png"
-                            alt="blender-skill"
-                        />
-                    </a> */}
                 </div>
             </Animate>
         </section>

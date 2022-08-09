@@ -1,18 +1,25 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useContext } from 'react'
 import Animate from './Animate'
 import useWindowSize from "../hooks/useWindowSize"
+import { langCtx, Paragraphs } from '../context/langCtx'
 
 function WebsiteIdeea()
 {
+    const langValue = useContext(langCtx)
+
+    const Headline = Paragraphs.WebsiteIdeea.part_0[langValue];
+    const Subheadline_1 = Paragraphs.WebsiteIdeea.part_1[langValue];
+    const Subheadline_2 = Paragraphs.WebsiteIdeea.part_2[langValue];
+
     const [isPhoneSize] = useWindowSize(664, 0)
 
     return (
         <section className="margin-total padding-total">
             <Animate animation="step-anim-delay" start>
-                <div className="headline-sm text-center">I Will Build Your Website </div>
+                <div className="headline-sm text-center">{Headline}</div>
                 <div className="text-container text-center">
                     <div className="text-collapsed ">
-                        Your web project 📽 can now {isPhoneSize && (<br />)} become a reality.
+                        {Subheadline_1} {isPhoneSize && (<br />)} {Subheadline_2}
                     </div>
                 </div>
             </Animate>

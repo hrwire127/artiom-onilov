@@ -1,12 +1,17 @@
-import React from 'react'
-import { Link } from "react-router-dom";
+import React, { useContext } from 'react'
 import { Element } from 'react-scroll'
 import Form from './Form';
 import Animate from './Animate'
+import { langCtx, Paragraphs } from '../context/langCtx'
 import useWindowSize from "../hooks/useWindowSize"
 
 function CallToAction()
 {
+    const langValue = useContext(langCtx)
+
+    const Headline = Paragraphs.CallToAction.part_0[langValue];
+    const Subheadline = Paragraphs.CallToAction.part_1[langValue];
+
     return (
         <section className="margin-total padding-total"
             style={{
@@ -18,13 +23,13 @@ function CallToAction()
                         className="headline-center blue"
                         style={{ marginBottom: "30px", color: "#B8DFF0" }}
                     >
-                        Get Your Website
+                        {Headline}
                     </div>
                     <div className="text-container text-center">
                         <div className="text-collapsed"
                             style={{ color: "rgb(176 199 209)", fontSize: "1.5rem" }}
                         >
-                            Place an order 🎁
+                            {Subheadline}
                         </div>
                     </div>
                     <Form />
