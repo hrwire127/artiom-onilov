@@ -148,7 +148,7 @@ const Paragraphs = {
             "Получите Cвой Bеб-Cайт",
         ],
         part_1: [
-            "Place an request 🎁",
+            "Place a request 🎁",
             "Plaseaza o cerere 🎁",
             "Оставьте заявку 🎁",
         ],
