@@ -1,0 +1,50 @@
+.dropbar-container {
+  overflow: hidden;
+
+  position: fixed;
+  left: 6%;
+  bottom: 6%;
+
+  max-height: 21px;
+  padding: 20px;
+
+  border-radius: 100px;
+  background-color: #7971ea;
+  color: white;
+  transition: max-height 0.6s;
+
+  animation-name: appear;
+  animation-duration: 0.2s;
+
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: flex-end;
+  align-items: center;
+
+  z-index: 7;
+}
+
+.dropbar-container:hover {
+  border-radius: 40px;
+  max-height: 500px;
+}
+
+.dropbar-btn {
+  cursor: pointer;
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 600;
+  transition: opacity 0.4s;
+  opacity: 0.5;
+  z-index: 7;
+}
+
+.dropbar-btn-active {
+  cursor: default;
+  opacity: 1;
+}
+
+.dropbar-btn:hover {
+  opacity: 1;
+}
