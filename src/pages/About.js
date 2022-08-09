@@ -106,6 +106,13 @@ function About()
                             alt="nextjs-skill"
                         />
                     </a>
+                    <a className="skill-container" href="https://mui.com/">
+                        <img
+                            className="skill-img"
+                            src="/images/skills/mui.png"
+                            alt="mui-skill"
+                        />
+                    </a>
                     <a className="skill-container" href="https://expressjs.com/">
                         <img
                             style={{ height: 23 }}

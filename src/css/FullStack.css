@@ -19,17 +19,10 @@
 
 .container-fullstack {
   text-align: center;
-  /* 
-  margin: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 40px; */
-
   display: grid;
   justify-content: center;
   grid-template-columns: repeat(3, 236px);
-  grid-template-rows: repeat(3, 236px);
+  grid-template-rows: repeat(2, 236px);
   grid-gap: 30px 40px;
 }
 
@@ -41,7 +34,6 @@
     margin-bottom: 30px;
   }
 }
-
 
 @media (max-width: 866px) {
   .padding-total {

@@ -6,8 +6,8 @@
 
 .rounded-layout {
   position: relative;
-  border-bottom-left-radius: 120px;
-  border-bottom-right-radius: 120px;
+  border-bottom-left-radius: 100px;
+  border-bottom-right-radius: 100px;
 }
 
 .margin-total {
@@ -160,8 +160,8 @@
     padding-bottom: 140px;
   }
   .rounded-layout {
-    border-bottom-left-radius: 100px;
-    border-bottom-right-radius: 100px;
+    border-bottom-left-radius: 80px;
+    border-bottom-right-radius: 80px;
   }
 }
 
@@ -193,8 +193,8 @@
     padding-right: 20px;
   }
   .rounded-layout {
-    border-bottom-left-radius: 80px;
-    border-bottom-right-radius: 80px;
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
   }
 }
 
@@ -211,8 +211,8 @@
     padding-right: 60px;
   }
   .rounded-layout {
-    border-bottom-left-radius: 70px;
-    border-bottom-right-radius: 70px;
+    border-bottom-left-radius: 80px;
+    border-bottom-right-radius: 80px;
   }
 }
 
@@ -230,13 +230,13 @@
     padding-right: 80px;
   }
   .rounded-layout {
-    border-bottom-left-radius: 60px;
-    border-bottom-right-radius: 60px;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
   }
   .rounded-layout {
     position: relative;
-    border-bottom-left-radius: 60px;
-    border-bottom-right-radius: 60px;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
   }
 }
 
