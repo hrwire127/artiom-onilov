@@ -219,6 +219,16 @@ const Paragraphs = {
             "caractere în lungime",
             "символов в длину",
         ],
+        part_13: [
+            "Sent!",
+            "Trimis!",
+            "Отправил!",
+        ],
+        part_14: [
+            "Failed, Something went wrong",
+            "Eșuat, ceva nu a mers corect",
+            "Не удалось, что-то пошло не так",
+        ],
     },
     Portofolio: {
         part_0: [

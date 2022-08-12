@@ -92,7 +92,7 @@ function Form()
         }
         if (message.length < messageMinLength)
         {
-            const helper = `${Alert_5} ${messageMinLength} ${Alert_6}`
+            const helper = `${Alert_6} ${messageMinLength} ${Alert_7}`
             toggleFieldError("message", "red")
             setMessage(helper, "error")
             setSending(false)
