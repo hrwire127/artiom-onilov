@@ -14,6 +14,13 @@ function Form()
     const MessageText = Paragraphs.Form.part_3[langValue];
     const ButtonActive = Paragraphs.Form.part_4[langValue];
     const ButtonDisabled = Paragraphs.Form.part_5[langValue];
+    const Alert_1 = Paragraphs.Form.part_6[langValue];
+    const Alert_2 = Paragraphs.Form.part_7[langValue];
+    const Alert_3 = Paragraphs.Form.part_8[langValue];
+    const Alert_4 = Paragraphs.Form.part_9[langValue];
+    const Alert_5 = Paragraphs.Form.part_10[langValue];
+    const Alert_6 = Paragraphs.Form.part_11[langValue];
+    const Alert_7 = Paragraphs.Form.part_12[langValue];
 
     const [toSend, dispatchSend] = useReducer(fieldReducer, {
         from_name: { value: '', helper: null },
@@ -45,7 +52,7 @@ function Form()
 
         if (from_name === "")
         {
-            const helper = "Your name field cannot be empty";
+            const helper = Alert_1;
             toggleFieldError("from_name", "red")
             setMessage(helper, "error")
             setSending(false)
@@ -53,7 +60,7 @@ function Form()
         }
         if (from_email === "")
         {
-            const helper = "Your email field cannot be empty"
+            const helper = Alert_2
             toggleFieldError("from_email", "red")
             setMessage(helper, "error")
             setSending(false)
@@ -61,7 +68,7 @@ function Form()
         }
         if (subject === "")
         {
-            const helper = "The subject field cannot be empty"
+            const helper = Alert_3
             toggleFieldError("subject", "red")
             setMessage(helper, "error")
             setSending(false)
@@ -69,7 +76,7 @@ function Form()
         }
         if (message === "")
         {
-            const helper = "The message field cannot be empty"
+            const helper = Alert_4
             toggleFieldError("message", "red")
             setMessage(helper, "error")
             setSending(false)
@@ -77,7 +84,7 @@ function Form()
         }
         if (!from_email.includes("@"))
         {
-            const helper = "Invalid email"
+            const helper = Alert_5
             toggleFieldError("from_email", "red")
             setMessage(helper, "error")
             setSending(false)
@@ -85,7 +92,7 @@ function Form()
         }
         if (message.length < messageMinLength)
         {
-            const helper = `The message must be at least ${messageMinLength} characters in length`
+            const helper = `${Alert_5} ${messageMinLength} ${Alert_6}`
             toggleFieldError("message", "red")
             setMessage(helper, "error")
             setSending(false)

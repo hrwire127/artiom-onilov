@@ -1,8 +1,13 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import useWindowSize from "../hooks/useWindowSize"
+import { langCtx, Paragraphs } from '../context/langCtx'
 
 function PortofolioItem(props)
 {
+    const langValue = useContext(langCtx)
+
+    const Repo = Paragraphs.Portofolio.part_2[langValue];
+
     const { link, name, repo, img, setLoading, normal, aspect, light } = props
     const [Stack] = useWindowSize(1000, 0)
 
@@ -31,7 +36,7 @@ function PortofolioItem(props)
                     ? "item-repo-light"
                     : "item-repo-dark"}
                 >
-                    repository
+                    {Repo}
                 </div>
                 <a
                     alt="ctice-repo"

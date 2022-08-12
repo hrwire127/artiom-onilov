@@ -184,6 +184,41 @@ const Paragraphs = {
             "Trimite",
             "Отправлять",
         ],
+        part_6: [
+            "Your name field cannot be empty",
+            "Câmpul pentru numele dvs. nu poate fi gol",
+            "Поле имени не может быть пустым",
+        ],
+        part_7: [
+            "Your email field cannot be empty",
+            "Câmpul dvs. de e-mail nu poate fi gol",
+            "Поле электронной почты не может быть пустым",
+        ],
+        part_8: [
+            "The subject field cannot be empty",
+            "Câmpul Subiect nu poate fi gol",
+            "Поле темы не может быть пустым",
+        ],
+        part_9: [
+            "The message field cannot be empty",
+            "Câmpul de mesaj nu poate fi gol",
+            "Поле сообщения не может быть пустым",
+        ],
+        part_10: [
+            "Invalid email",
+            "Email invalid",
+            "Неверный адрес электронной почты",
+        ],
+        part_11: [
+            "The message must be at least",
+            "Mesajul trebuie să fie cel puțin",
+            "Сообщение должно быть не менее",
+        ],
+        part_12: [
+            "characters in length",
+            "caractere în lungime",
+            "символов в длину",
+        ],
     },
     Portofolio: {
         part_0: [
@@ -195,6 +230,11 @@ const Paragraphs = {
             "Here are some of my recent projects ☁",
             "Iată câteva dintre proiecte mele recente☁",
             "Вот некоторые из моих последних проектов ☁",
+        ],
+        part_2: [
+            "repository",
+            "sursa",
+            "хранилище",
         ],
     },
     About: {
