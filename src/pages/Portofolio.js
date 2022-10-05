@@ -54,20 +54,20 @@ function Portofolio()
                         <div className="portofolio-container-diff">
                             <div className="huge-row">
                                 <PortofolioItem
-                                    link="https://murmuring-wave-59408.herokuapp.com/"
-                                    name="Ctice 📚"
-                                    repo="https://github.com/hrwire127/ctice"
-                                    img="ctice"
+                                    link="https://avangard0.herokuapp.com/"
+                                    name="Avangard 🔧"
+                                    repo="https://github.com/hrwire127/avangard"
+                                    img="avangard"
                                     setLoading={setLoading}
                                     aspect
                                 />
                             </div>
                             <div className="small-row">
                                 <PortofolioItem
-                                    link="https://yahtzee39.herokuapp.com/"
-                                    name="Yahtzee 🎲"
-                                    repo="https://github.com/hrwire127/yahtzee"
-                                    img="yahtzee"
+                                    link="https://murmuring-wave-59408.herokuapp.com/"
+                                    name="Ctice 📚"
+                                    repo="https://github.com/hrwire127/ctice"
+                                    img="ctice"
                                     setLoading={setLoading}
                                 />
                                 <PortofolioItem
@@ -89,10 +89,10 @@ function Portofolio()
                                     setLoading={setLoading}
                                 />
                                 <PortofolioItem
-                                    link="https://dad-jokes31.herokuapp.com/"
-                                    name="Dad Jokes 🤣"
-                                    repo="https://github.com/hrwire127/dad-jokes"
-                                    img="dadjokes"
+                                    link="https://yahtzee39.herokuapp.com/"
+                                    name="Yahtzee 🎲"
+                                    repo="https://github.com/hrwire127/yahtzee"
+                                    img="yahtzee"
                                     setLoading={setLoading}
                                 />
                             </div>
@@ -144,7 +144,14 @@ function Portofolio()
                                 setLoading={setLoading}
                                 normal
                             />
-                            <div className="item-normal" />
+                            <PortofolioItem
+                                link="https://dad-jokes31.herokuapp.com/"
+                                name="Dad Jokes 🤣"
+                                repo="https://github.com/hrwire127/dad-jokes"
+                                img="dadjokes"
+                                setLoading={setLoading}
+                                normal
+                            />
                             <div className="item-normal" />
                         </div>
                     </section>

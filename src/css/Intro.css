@@ -2,9 +2,8 @@
   width: 450px;
   height: 450px;
 
-  background-position: 0px -50px;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
 
   border-radius: 360px;
 }

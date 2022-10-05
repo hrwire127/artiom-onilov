@@ -28,7 +28,7 @@ function PortofolioItem(props)
             >
                 {name}
             </div>
-            <div className={Stack
+            {/* <div className={Stack
                 ? "item-repo item-no-anim"
                 : "item-repo item-repo-anim"}
             >
@@ -49,7 +49,7 @@ function PortofolioItem(props)
                 >
                     {repo}
                 </a>
-            </div>
+            </div> */}
             <div
                 className='portofolio-img-overlay'
             />

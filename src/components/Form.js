@@ -158,7 +158,8 @@ function Form()
         </button>)
 
     const DisabledBtn = () => (
-        <button disabled
+        <button
+            disabled
             className="action-btn-m btn-disabled"
             style={{
                 display: "flex",

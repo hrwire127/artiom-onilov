@@ -60,7 +60,7 @@ function Intro()
             </Animate>
             <Animate animation="step-anim" start>
                 <Image
-                    src="/images/profile/intro.jpg"
+                    src="/images/profile/about.jpg"
                     alt="profile-intro-img"
                     className="profile"
                     placeholder={<Spinner />}
@@ -79,7 +79,7 @@ function Intro()
             <Animate animation="step-anim" start>
                 <div className="container-center">
                     <Image
-                        src="/images/profile/intro.jpg"
+                        src="/images/profile/about.jpg"
                         alt="profile-intro-img"
                         className="profile"
                         placeholder={<Spinner />}

@@ -9,7 +9,7 @@ import "../css/ScrollTop.css"
 
 function Layout(props)
 {
-    const [Lang, setLang] = useState(0)
+    const [Lang, setLang] = useState(1)
 
     return (<main style={{
         minHeight: "100vh",
