@@ -26,6 +26,9 @@ function Footer()
                     <a href="https://github.com/hrwire127">
                         <img alt="github-contact" src="/images/github-light.png" className="footer-contact-img" style={{ width: "30px" }} />
                     </a>
+                    <a href="https://www.instagram.com/profesionist_web_developer/">
+                        <img alt="instagram-contact" src="/images/instagram.png" className="footer-contact-img" style={{ width: "30px" }} />
+                    </a>
                 </div>
             </Animate>
         </footer >
